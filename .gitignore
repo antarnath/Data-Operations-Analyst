@@ -1,0 +1,21 @@
+# Raw source data — contains patient names and dates of service.
+# The dashboard renders from the pre-built JSON, so these are not needed publicly.
+_work/data/
+*.csv
+
+# Personal documents and generated PDFs — keep these out of a public repo.
+_work/docs/*.pdf
+antar_chandra_nath_resume.pdf
+"Central Operations Case Study.pdf"
+Antar_Chandra_Nath_*.pdf
+
+# Build pipeline and verification harness — not needed to serve the dashboard.
+_work/build/
+_work/scripts/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

@@ -1,0 +1,4270 @@
+{
+ "meta": {
+  "generated": "2026-10-23 17:17",
+  "period": "2024-07-01 to 2024-09-30",
+  "ehr_rows": 25956,
+  "db_rows": 6482,
+  "ehr_encounters": 6612,
+  "db_encounters": 6374,
+  "total_lines": 25954,
+  "patients": 542,
+  "providers": 8
+ },
+ "kpi": {
+  "clean_value": 3046880.63,
+  "leak_value": 138893.98,
+  "leak_pct_val": 4.37,
+  "missing_enc": 282,
+  "missing_lines": 1039,
+  "missing_value": 133110.32,
+  "mismatch_enc": 34,
+  "mis_missing_value": 5783.66,
+  "mis_extra_value": 7215.4,
+  "db_only_enc": 44,
+  "db_only_value": 23946.99,
+  "critical_value": 39744.33,
+  "critical_count": 77,
+  "clean_pct": 99.46,
+  "dirty_codes": 11,
+  "dirty_lines": 315,
+  "recon_pct": 95.74
+ },
+ "providers": [
+  {
+   "provider": "Aiden King",
+   "clean_enc": 1840,
+   "missing_enc": 95,
+   "mismatch_enc": 10,
+   "missing_val": 45377.27,
+   "dirty": 136,
+   "total_enc": 1935,
+   "leak_pct": 4.91
+  },
+  {
+   "provider": "Noah Lee",
+   "clean_enc": 1464,
+   "missing_enc": 52,
+   "mismatch_enc": 14,
+   "missing_val": 22661.01,
+   "dirty": 36,
+   "total_enc": 1516,
+   "leak_pct": 3.43
+  },
+  {
+   "provider": "Liam Young",
+   "clean_enc": 588,
+   "missing_enc": 36,
+   "mismatch_enc": 4,
+   "missing_val": 20135.17,
+   "dirty": 2,
+   "total_enc": 624,
+   "leak_pct": 5.77
+  },
+  {
+   "provider": "Sebastian Miller",
+   "clean_enc": 603,
+   "missing_enc": 37,
+   "mismatch_enc": 4,
+   "missing_val": 19493.24,
+   "dirty": 64,
+   "total_enc": 640,
+   "leak_pct": 5.78
+  },
+  {
+   "provider": "Charlotte Williams",
+   "clean_enc": 576,
+   "missing_enc": 20,
+   "mismatch_enc": 1,
+   "missing_val": 10509.9,
+   "dirty": 31,
+   "total_enc": 596,
+   "leak_pct": 3.36
+  },
+  {
+   "provider": "Sebastian Martinez",
+   "clean_enc": 554,
+   "missing_enc": 19,
+   "mismatch_enc": 1,
+   "missing_val": 6858.19,
+   "dirty": 22,
+   "total_enc": 573,
+   "leak_pct": 3.32
+  },
+  {
+   "provider": "Julian Lee",
+   "clean_enc": 472,
+   "missing_enc": 13,
+   "mismatch_enc": 0,
+   "missing_val": 4112.48,
+   "dirty": 14,
+   "total_enc": 485,
+   "leak_pct": 2.68
+  },
+  {
+   "provider": "Elijah Johnson",
+   "clean_enc": 233,
+   "missing_enc": 10,
+   "mismatch_enc": 0,
+   "missing_val": 3963.06,
+   "dirty": 10,
+   "total_enc": 243,
+   "leak_pct": 4.12
+  }
+ ],
+ "monthly": [
+  {
+   "month": "2024-07",
+   "clean": 2077,
+   "missing": 65,
+   "missing_val": 29841.77,
+   "mismatch": 16,
+   "ghost": 14,
+   "imported": 2063
+  },
+  {
+   "month": "2024-08",
+   "clean": 2142,
+   "missing": 106,
+   "missing_val": 50132.19,
+   "mismatch": 9,
+   "ghost": 12,
+   "imported": 2130
+  },
+  {
+   "month": "2024-09",
+   "clean": 2111,
+   "missing": 111,
+   "missing_val": 53136.36,
+   "mismatch": 9,
+   "ghost": 18,
+   "imported": 2093
+  }
+ ],
+ "codes": [
+  {
+   "code": "97140",
+   "lines": 6370,
+   "rate": 0.0,
+   "family": "Other",
+   "valid": true,
+   "missing_lines": 13,
+   "extra_lines": 10
+  },
+  {
+   "code": "97110",
+   "lines": 5640,
+   "rate": 165.71,
+   "family": "Established Patient E/M - low/moderate",
+   "valid": true,
+   "missing_lines": 12,
+   "extra_lines": 11
+  },
+  {
+   "code": "97112",
+   "lines": 4911,
+   "rate": 222.44,
+   "family": "Established Patient E/M - moderate",
+   "valid": true,
+   "missing_lines": 11,
+   "extra_lines": 8
+  },
+  {
+   "code": "97010",
+   "lines": 4844,
+   "rate": 100.44,
+   "family": "New Patient E/M - low",
+   "valid": true,
+   "missing_lines": 11,
+   "extra_lines": 6
+  },
+  {
+   "code": "97014",
+   "lines": 1846,
+   "rate": 193.18,
+   "family": "New Patient E/M - high",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 10
+  },
+  {
+   "code": "G0283",
+   "lines": 759,
+   "rate": 66.77,
+   "family": "Physician-QHP telephone E/M",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 2
+  },
+  {
+   "code": "97161",
+   "lines": 378,
+   "rate": 189.36,
+   "family": "Chronic Care Mgmt - initial",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "97162",
+   "lines": 250,
+   "rate": 243.46,
+   "family": "Chronic Care Mgmt - subsequent",
+   "valid": true,
+   "missing_lines": 1,
+   "extra_lines": 3
+  },
+  {
+   "code": "97035",
+   "lines": 239,
+   "rate": 214.71,
+   "family": "Established Patient E/M - moderate",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 1
+  },
+  {
+   "code": "NORCM",
+   "lines": 206,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 206,
+   "extra_lines": 0
+  },
+  {
+   "code": "97530",
+   "lines": 126,
+   "rate": 120.43,
+   "family": "Therapeutic activities",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "97113",
+   "lines": 90,
+   "rate": 289.14,
+   "family": "Established Patient E/M - moderate/high",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "97163",
+   "lines": 56,
+   "rate": 363.72,
+   "family": "Chronic Care Mgmt - high complexity",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "97032",
+   "lines": 36,
+   "rate": 159.62,
+   "family": "Established Patient E/M - low",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "sp90",
+   "lines": 36,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 36,
+   "extra_lines": 0
+  },
+  {
+   "code": "97116",
+   "lines": 29,
+   "rate": 0.0,
+   "family": "Other",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "TOS115",
+   "lines": 27,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 27,
+   "extra_lines": 0
+  },
+  {
+   "code": "SP",
+   "lines": 27,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 27,
+   "extra_lines": 0
+  },
+  {
+   "code": "97124",
+   "lines": 23,
+   "rate": 42.87,
+   "family": "TTA",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "97012",
+   "lines": 20,
+   "rate": 180.68,
+   "family": "New Patient E/M - moderate",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "97164",
+   "lines": 11,
+   "rate": 203.36,
+   "family": "Chronic Care Mgmt - complex",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "SP90",
+   "lines": 7,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 7,
+   "extra_lines": 0
+  },
+  {
+   "code": "SP$90",
+   "lines": 7,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 7,
+   "extra_lines": 0
+  },
+  {
+   "code": "98960",
+   "lines": 6,
+   "rate": 115.53,
+   "family": "Treatment w/ manipulation",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "97606",
+   "lines": 3,
+   "rate": 113.7,
+   "family": "Evaluation of orthotics",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "98970",
+   "lines": 2,
+   "rate": 111.3,
+   "family": "Acupuncture",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "SP110",
+   "lines": 1,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 1,
+   "extra_lines": 0
+  },
+  {
+   "code": "1",
+   "lines": 1,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 1,
+   "extra_lines": 0
+  },
+  {
+   "code": "SP$110",
+   "lines": 1,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 1,
+   "extra_lines": 0
+  },
+  {
+   "code": "TOS",
+   "lines": 1,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 1,
+   "extra_lines": 0
+  },
+  {
+   "code": "sp120",
+   "lines": 1,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 1,
+   "extra_lines": 0
+  }
+ ],
+ "dirty": [
+  {
+   "code": "NORCM",
+   "count": 206,
+   "label": "RCM internal status flag (do not bill)"
+  },
+  {
+   "code": "sp90",
+   "count": 36,
+   "label": "Short procedure fragment (case variance)"
+  },
+  {
+   "code": "TOS115",
+   "count": 27,
+   "label": "Place-of-service modifier fragment"
+  },
+  {
+   "code": "SP",
+   "count": 27,
+   "label": "Short procedure fragment"
+  },
+  {
+   "code": "SP90",
+   "count": 7,
+   "label": "Short procedure fragment"
+  },
+  {
+   "code": "SP$90",
+   "count": 7,
+   "label": "Short procedure fragment"
+  },
+  {
+   "code": "SP110",
+   "count": 1,
+   "label": "Short procedure fragment"
+  },
+  {
+   "code": "1",
+   "count": 1,
+   "label": "Unrecognised code - needs mapping"
+  },
+  {
+   "code": "SP$110",
+   "count": 1,
+   "label": "Short procedure fragment"
+  },
+  {
+   "code": "TOS",
+   "count": 1,
+   "label": "Place-of-service modifier fragment"
+  },
+  {
+   "code": "sp120",
+   "count": 1,
+   "label": "Short procedure fragment (case variance)"
+  }
+ ],
+ "mismatches": [
+  {
+   "patient": "Mia Martin",
+   "provider": "Noah Lee",
+   "date": "2024-07-25",
+   "missing": [
+    "97112",
+    "97140",
+    "97110",
+    "97010"
+   ],
+   "extra": [],
+   "value": 488.59000000000003
+  },
+  {
+   "patient": "Aria Allen",
+   "provider": "Noah Lee",
+   "date": "2024-09-04",
+   "missing": [],
+   "extra": [
+    "97162",
+    "97140",
+    "97110"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Sebastian Thomas",
+   "provider": "Liam Young",
+   "date": "2024-07-10",
+   "missing": [],
+   "extra": [
+    "97110"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Mia Martin",
+   "provider": "Noah Lee",
+   "date": "2024-08-01",
+   "missing": [
+    "97140",
+    "97110",
+    "97010",
+    "97112"
+   ],
+   "extra": [],
+   "value": 488.59000000000003
+  },
+  {
+   "patient": "Sebastian Thomas",
+   "provider": "Liam Young",
+   "date": "2024-07-17",
+   "missing": [],
+   "extra": [
+    "97110"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "David Allen",
+   "provider": "Noah Lee",
+   "date": "2024-08-29",
+   "missing": [],
+   "extra": [
+    "97140",
+    "97112"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Elijah Martin",
+   "provider": "Aiden King",
+   "date": "2024-07-03",
+   "missing": [],
+   "extra": [
+    "97014"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Elijah Martin",
+   "provider": "Sebastian Miller",
+   "date": "2024-07-17",
+   "missing": [],
+   "extra": [
+    "97014"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Isabella Wilson",
+   "provider": "Aiden King",
+   "date": "2024-08-06",
+   "missing": [],
+   "extra": [
+    "97010",
+    "97112",
+    "97140",
+    "97110"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Olivia Perez",
+   "provider": "Aiden King",
+   "date": "2024-09-04",
+   "missing": [
+    "97110",
+    "sp90",
+    "97140",
+    "97010",
+    "NORCM",
+    "97112"
+   ],
+   "extra": [],
+   "value": 488.59000000000003
+  },
+  {
+   "patient": "Sebastian Perez",
+   "provider": "Noah Lee",
+   "date": "2024-07-08",
+   "missing": [],
+   "extra": [
+    "97112",
+    "97140",
+    "97110",
+    "97010"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Carter Jones",
+   "provider": "Aiden King",
+   "date": "2024-07-22",
+   "missing": [
+    "97010",
+    "97112",
+    "97140",
+    "97110",
+    "NORCM"
+   ],
+   "extra": [],
+   "value": 488.59000000000003
+  },
+  {
+   "patient": "Olivia Martin",
+   "provider": "Aiden King",
+   "date": "2024-08-29",
+   "missing": [
+    "97110",
+    "97112",
+    "97140",
+    "97162"
+   ],
+   "extra": [],
+   "value": 631.61
+  },
+  {
+   "patient": "Mia Martin",
+   "provider": "Noah Lee",
+   "date": "2024-08-08",
+   "missing": [
+    "97010",
+    "97140",
+    "97110",
+    "97112"
+   ],
+   "extra": [],
+   "value": 488.59000000000003
+  },
+  {
+   "patient": "Sophia Young",
+   "provider": "Noah Lee",
+   "date": "2024-09-06",
+   "missing": [],
+   "extra": [
+    "97112",
+    "97110",
+    "97140",
+    "97010",
+    "97014"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Mia Martin",
+   "provider": "Noah Lee",
+   "date": "2024-08-16",
+   "missing": [
+    "97010",
+    "97110",
+    "97140",
+    "97112"
+   ],
+   "extra": [],
+   "value": 488.59000000000003
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Aiden King",
+   "date": "2024-09-26",
+   "missing": [
+    "97110",
+    "97010",
+    "NORCM",
+    "97140"
+   ],
+   "extra": [],
+   "value": 266.15
+  },
+  {
+   "patient": "Scarlett Smith",
+   "provider": "Aiden King",
+   "date": "2024-09-12",
+   "missing": [],
+   "extra": [
+    "97140",
+    "97110",
+    "97162"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Layla Davis",
+   "provider": "Aiden King",
+   "date": "2024-07-08",
+   "missing": [],
+   "extra": [
+    "97112",
+    "97010",
+    "97140"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Zoe Gonzalez",
+   "provider": "Sebastian Miller",
+   "date": "2024-07-01",
+   "missing": [],
+   "extra": [
+    "97014"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Mia Martin",
+   "provider": "Noah Lee",
+   "date": "2024-08-20",
+   "missing": [
+    "97140",
+    "97112",
+    "97010",
+    "97110"
+   ],
+   "extra": [],
+   "value": 488.59000000000003
+  },
+  {
+   "patient": "Olivia Martin",
+   "provider": "Noah Lee",
+   "date": "2024-09-17",
+   "missing": [
+    "97010",
+    "97140",
+    "97112"
+   ],
+   "extra": [],
+   "value": 322.88
+  },
+  {
+   "patient": "Noah Garcia",
+   "provider": "Noah Lee",
+   "date": "2024-09-20",
+   "missing": [],
+   "extra": [
+    "97110",
+    "97140",
+    "97112",
+    "97010"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Elijah Martin",
+   "provider": "Aiden King",
+   "date": "2024-07-15",
+   "missing": [],
+   "extra": [
+    "97014"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Zoe Gonzalez",
+   "provider": "Charlotte Williams",
+   "date": "2024-07-15",
+   "missing": [],
+   "extra": [
+    "97014"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Zoe Gonzalez",
+   "provider": "Sebastian Martinez",
+   "date": "2024-07-08",
+   "missing": [],
+   "extra": [
+    "97014"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Zoe Gonzalez",
+   "provider": "Sebastian Miller",
+   "date": "2024-07-11",
+   "missing": [],
+   "extra": [
+    "G0283",
+    "97014"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Scarlett Lopez",
+   "provider": "Liam Young",
+   "date": "2024-09-30",
+   "missing": [],
+   "extra": [
+    "97014",
+    "97010",
+    "97110",
+    "97140",
+    "97035",
+    "97112"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Sebastian Thomas",
+   "provider": "Liam Young",
+   "date": "2024-07-22",
+   "missing": [],
+   "extra": [
+    "97110"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Zoe Gonzalez",
+   "provider": "Sebastian Miller",
+   "date": "2024-07-05",
+   "missing": [],
+   "extra": [
+    "G0283",
+    "97014"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Mia Martin",
+   "provider": "Noah Lee",
+   "date": "2024-08-22",
+   "missing": [
+    "97010",
+    "97140",
+    "97112",
+    "97110"
+   ],
+   "extra": [],
+   "value": 488.59000000000003
+  },
+  {
+   "patient": "Charlotte Brown",
+   "provider": "Aiden King",
+   "date": "2024-08-01",
+   "missing": [],
+   "extra": [
+    "97112",
+    "97162",
+    "97110",
+    "97140"
+   ],
+   "value": 0
+  },
+  {
+   "patient": "Mia Martin",
+   "provider": "Noah Lee",
+   "date": "2024-07-18",
+   "missing": [
+    "97140",
+    "97110"
+   ],
+   "extra": [],
+   "value": 165.71
+  },
+  {
+   "patient": "Olivia Martin",
+   "provider": "Noah Lee",
+   "date": "2024-09-26",
+   "missing": [
+    "97140",
+    "97010",
+    "97112",
+    "97110"
+   ],
+   "extra": [],
+   "value": 488.59000000000003
+  }
+ ],
+ "triage": [
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-30",
+   "valid_codes": 6,
+   "junk_codes": [],
+   "value": 896.48,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Mateo Jackson",
+   "provider": "Noah Lee",
+   "date": "2024-09-17",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 824.79,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Aiden Clark",
+   "provider": "Noah Lee",
+   "date": "2024-09-06",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 681.77,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-08-02",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 681.77,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Noah Lee",
+   "date": "2024-07-30",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 681.77,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-07-22",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 681.77,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-07-26",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 681.77,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Aiden Clark",
+   "provider": "Liam Young",
+   "date": "2024-09-04",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 681.77,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-07-23",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 681.77,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-03",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 674.04,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-20",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 674.04,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-10",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 674.04,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-24",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 674.04,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-27",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 674.04,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-17",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 674.04,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-08-30",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 674.04,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-06",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 674.04,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-13",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 674.04,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Sophia Smith",
+   "provider": "Noah Lee",
+   "date": "2024-09-19",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 648.69,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Sophia Hernandez",
+   "provider": "Aiden King",
+   "date": "2024-08-20",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 577.51,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Olivia Johnson",
+   "provider": "Aiden King",
+   "date": "2024-08-13",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 555.36,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-08-29",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 555.36,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-09-04",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 555.36,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-08-14",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 555.36,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-08-22",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 555.36,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-09-18",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 555.36,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Noah Lee",
+   "date": "2024-08-12",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 555.36,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-09-11",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 555.36,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Noah Lee",
+   "date": "2024-08-08",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 555.36,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-09-02",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 555.36,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-08-26",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 555.36,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Scarlett Allen",
+   "provider": "Aiden King",
+   "date": "2024-07-10",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 555.36,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-09-25",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 555.36,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Noah Lee",
+   "date": "2024-08-02",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 555.36,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Noah Lee",
+   "date": "2024-07-30",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 555.36,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-08-05",
+   "valid_codes": 5,
+   "junk_codes": [],
+   "value": 555.36,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-08-27",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 508.33,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Harper Hernandez",
+   "provider": "Sebastian Miller",
+   "date": "2024-07-08",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Mateo Thomas",
+   "provider": "Aiden King",
+   "date": "2024-08-01",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Miller",
+   "provider": "Aiden King",
+   "date": "2024-07-25",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Elijah Thomas",
+   "provider": "Liam Young",
+   "date": "2024-09-25",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Olivia Martin",
+   "provider": "Noah Lee",
+   "date": "2024-09-03",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Olivia Martin",
+   "provider": "Aiden King",
+   "date": "2024-09-24",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Olivia Martin",
+   "provider": "Noah Lee",
+   "date": "2024-09-20",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Olivia Martin",
+   "provider": "Noah Lee",
+   "date": "2024-09-13",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Mateo Thomas",
+   "provider": "Sebastian Martinez",
+   "date": "2024-07-08",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Harper Hernandez",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-05",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Miller",
+   "provider": "Aiden King",
+   "date": "2024-08-28",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Olivia Martin",
+   "provider": "Noah Lee",
+   "date": "2024-09-10",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Miller",
+   "provider": "Julian Lee",
+   "date": "2024-07-12",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Mateo Thomas",
+   "provider": "Sebastian Miller",
+   "date": "2024-07-01",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Miller",
+   "provider": "Aiden King",
+   "date": "2024-07-16",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Noah Lopez",
+   "provider": "Aiden King",
+   "date": "2024-07-23",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Olivia Martin",
+   "provider": "Aiden King",
+   "date": "2024-09-06",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Mateo Thomas",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-05",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Miller",
+   "provider": "Aiden King",
+   "date": "2024-08-14",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Miller",
+   "provider": "Aiden King",
+   "date": "2024-07-30",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Mason Miller",
+   "provider": "Liam Young",
+   "date": "2024-09-25",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 488.59,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Liam Taylor",
+   "provider": "Aiden King",
+   "date": "2024-07-24",
+   "valid_codes": 3,
+   "junk_codes": [],
+   "value": 465.9,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Zoe Miller",
+   "provider": "Sebastian Martinez",
+   "date": "2024-09-30",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 459.33,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-08-05",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 459.33,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Sophia Young",
+   "provider": "Noah Lee",
+   "date": "2024-08-16",
+   "valid_codes": 3,
+   "junk_codes": [],
+   "value": 437.15,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Sophia Young",
+   "provider": "Noah Lee",
+   "date": "2024-07-19",
+   "valid_codes": 3,
+   "junk_codes": [],
+   "value": 437.15,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Sophia Young",
+   "provider": "Noah Lee",
+   "date": "2024-08-02",
+   "valid_codes": 3,
+   "junk_codes": [],
+   "value": 437.15,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Isabella Brown",
+   "provider": "Noah Lee",
+   "date": "2024-09-23",
+   "valid_codes": 2,
+   "junk_codes": [],
+   "value": 409.17,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-07-10",
+   "valid_codes": 3,
+   "junk_codes": [],
+   "value": 409.17,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Mateo Johnson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-24",
+   "valid_codes": 3,
+   "junk_codes": [],
+   "value": 409.17,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Emma King",
+   "provider": "Aiden King",
+   "date": "2024-09-18",
+   "valid_codes": 4,
+   "junk_codes": [],
+   "value": 358.89,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Emma King",
+   "provider": "Aiden King",
+   "date": "2024-08-16",
+   "valid_codes": 3,
+   "junk_codes": [],
+   "value": 358.89,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Noah Lee",
+   "date": "2024-08-08",
+   "valid_codes": 3,
+   "junk_codes": [],
+   "value": 293.62,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Sophia Young",
+   "provider": "Aiden King",
+   "date": "2024-07-26",
+   "valid_codes": 1,
+   "junk_codes": [],
+   "value": 289.14,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Charlotte Turner",
+   "provider": "Liam Young",
+   "date": "2024-09-25",
+   "valid_codes": 3,
+   "junk_codes": [],
+   "value": 281.12,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Aiden Allen",
+   "provider": "Liam Young",
+   "date": "2024-09-25",
+   "valid_codes": 3,
+   "junk_codes": [],
+   "value": 266.15,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-07-18",
+   "valid_codes": 2,
+   "junk_codes": [],
+   "value": 165.71,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-07-16",
+   "valid_codes": 2,
+   "junk_codes": [],
+   "value": 165.71,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Noah Taylor",
+   "provider": "Noah Lee",
+   "date": "2024-07-09",
+   "valid_codes": 2,
+   "junk_codes": [],
+   "value": 100.44,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Noah Taylor",
+   "provider": "Noah Lee",
+   "date": "2024-07-18",
+   "valid_codes": 2,
+   "junk_codes": [],
+   "value": 100.44,
+   "severity": "Critical",
+   "action": "Immediate escalation - clean claim, zero billable blockers"
+  },
+  {
+   "patient": "Elijah Moore",
+   "provider": "Aiden King",
+   "date": "2024-07-30",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "sp90"
+   ],
+   "value": 770.69,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ava Anderson",
+   "provider": "Aiden King",
+   "date": "2024-07-10",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM",
+    "sp120"
+   ],
+   "value": 751.87,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-07-18",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "TOS115"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-03",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "SP"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-09",
+   "valid_codes": 5,
+   "junk_codes": [
+    "SP",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-03",
+   "valid_codes": 5,
+   "junk_codes": [
+    "TOS115",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Martinez",
+   "date": "2024-09-25",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "SP"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-08-19",
+   "valid_codes": 5,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Charlotte Williams",
+   "date": "2024-07-23",
+   "valid_codes": 5,
+   "junk_codes": [
+    "TOS115",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-08-05",
+   "valid_codes": 5,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-08-09",
+   "valid_codes": 5,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-07-29",
+   "valid_codes": 5,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Carter Taylor",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-24",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-05",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "SP"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-11",
+   "valid_codes": 5,
+   "junk_codes": [
+    "SP",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-08-08",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "TOS115"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-23",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "TOS115"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-19",
+   "valid_codes": 5,
+   "junk_codes": [
+    "SP",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Charlotte Williams",
+   "date": "2024-08-12",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "SP"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-05",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "SP"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-07-08",
+   "valid_codes": 5,
+   "junk_codes": [
+    "TOS115",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Carter Taylor",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-30",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Julian Lee",
+   "date": "2024-08-30",
+   "valid_codes": 5,
+   "junk_codes": [
+    "SP",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-11",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "TOS115"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-13",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "TOS115"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-26",
+   "valid_codes": 5,
+   "junk_codes": [
+    "SP",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-08-30",
+   "valid_codes": 5,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Charlotte Williams",
+   "date": "2024-08-28",
+   "valid_codes": 5,
+   "junk_codes": [
+    "SP",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-07-15",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-09-16",
+   "valid_codes": 5,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ethan Martin",
+   "provider": "Noah Lee",
+   "date": "2024-07-25",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "SP"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-27",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "SP"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-16",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "SP"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-09",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "TOS115"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-21",
+   "valid_codes": 5,
+   "junk_codes": [
+    "SP",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-19",
+   "valid_codes": 5,
+   "junk_codes": [
+    "SP",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-23",
+   "valid_codes": 5,
+   "junk_codes": [
+    "SP",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-25",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "TOS115"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Julian Lee",
+   "date": "2024-09-13",
+   "valid_codes": 5,
+   "junk_codes": [
+    "SP",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-07-31",
+   "valid_codes": 5,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-05",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "TOS115"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-08-01",
+   "valid_codes": 5,
+   "junk_codes": [
+    "TOS115",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-07-17",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "TOS115"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-07-24",
+   "valid_codes": 5,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-08-06",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "TOS115"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-07-05",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "TOS115"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-07-10",
+   "valid_codes": 5,
+   "junk_codes": [
+    "TOS115",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-08-26",
+   "valid_codes": 5,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-29",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "TOS115"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-17",
+   "valid_codes": 5,
+   "junk_codes": [
+    "SP",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-09-16",
+   "valid_codes": 5,
+   "junk_codes": [
+    "TOS115",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-07-26",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "TOS115"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-07-29",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "TOS115"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-07",
+   "valid_codes": 5,
+   "junk_codes": [
+    "SP",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-08-22",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "TOS115"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-26",
+   "valid_codes": 5,
+   "junk_codes": [
+    "TOS115",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-09-18",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "TOS115"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-14",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "SP"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-08-15",
+   "valid_codes": 5,
+   "junk_codes": [
+    "TOS115",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Carter Taylor",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-20",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-07-17",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Aiden King",
+   "date": "2024-08-09",
+   "valid_codes": 5,
+   "junk_codes": [
+    "SP",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-08-20",
+   "valid_codes": 5,
+   "junk_codes": [
+    "TOS115",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ethan Martin",
+   "provider": "Noah Lee",
+   "date": "2024-08-02",
+   "valid_codes": 5,
+   "junk_codes": [
+    "SP",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-08-12",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "sp90"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Charlotte Williams",
+   "date": "2024-08-26",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "TOS115"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-23",
+   "valid_codes": 5,
+   "junk_codes": [
+    "SP",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-13",
+   "valid_codes": 5,
+   "junk_codes": [
+    "TOS115",
+    "NORCM"
+   ],
+   "value": 681.77,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Noah Gonzalez",
+   "provider": "Elijah Johnson",
+   "date": "2024-07-10",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 677.95,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Moore",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-21",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM",
+    "SP$110"
+   ],
+   "value": 631.61,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Perez",
+   "provider": "Noah Lee",
+   "date": "2024-09-20",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 609.02,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-09-03",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 602.86,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-09-05",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 602.86,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-09-10",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 602.86,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-08-26",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 602.86,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-08-28",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 602.86,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-08-19",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 602.86,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-08-15",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 602.86,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Elijah Moore",
+   "provider": "Aiden King",
+   "date": "2024-08-14",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM",
+    "sp90"
+   ],
+   "value": 581.33,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Elijah Moore",
+   "provider": "Aiden King",
+   "date": "2024-09-18",
+   "valid_codes": 4,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 581.33,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Elijah Moore",
+   "provider": "Aiden King",
+   "date": "2024-08-20",
+   "valid_codes": 4,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 581.33,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Elijah Moore",
+   "provider": "Aiden King",
+   "date": "2024-08-07",
+   "valid_codes": 4,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 581.33,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Liam Wilson",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-23",
+   "valid_codes": 4,
+   "junk_codes": [
+    "SP$90",
+    "NORCM"
+   ],
+   "value": 581.33,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Elijah Moore",
+   "provider": "Aiden King",
+   "date": "2024-09-04",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM",
+    "sp90"
+   ],
+   "value": 581.33,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Aiden King",
+   "date": "2024-07-31",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "SP"
+   ],
+   "value": 555.36,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Aiden King",
+   "date": "2024-08-02",
+   "valid_codes": 5,
+   "junk_codes": [
+    "NORCM",
+    "SP"
+   ],
+   "value": 555.36,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-09-12",
+   "valid_codes": 4,
+   "junk_codes": [
+    "1"
+   ],
+   "value": 537.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-09-16",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 537.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Perez",
+   "provider": "Noah Lee",
+   "date": "2024-09-06",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Isabella Thomas",
+   "provider": "Elijah Johnson",
+   "date": "2024-09-18",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Perez",
+   "provider": "Aiden King",
+   "date": "2024-08-12",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM",
+    "sp90"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Lee",
+   "provider": "Aiden King",
+   "date": "2024-09-16",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM",
+    "sp90"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Isabella Thomas",
+   "provider": "Liam Young",
+   "date": "2024-08-15",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Isabella Thomas",
+   "provider": "Elijah Johnson",
+   "date": "2024-07-18",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Perez",
+   "provider": "Noah Lee",
+   "date": "2024-09-13",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Isabella Thomas",
+   "provider": "Elijah Johnson",
+   "date": "2024-09-05",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Perez",
+   "provider": "Aiden King",
+   "date": "2024-08-20",
+   "valid_codes": 4,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Perez",
+   "provider": "Aiden King",
+   "date": "2024-08-06",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM",
+    "sp90"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Isabella Thomas",
+   "provider": "Elijah Johnson",
+   "date": "2024-07-03",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Perez",
+   "provider": "Aiden King",
+   "date": "2024-09-10",
+   "valid_codes": 4,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Noah Smith",
+   "provider": "Aiden King",
+   "date": "2024-07-08",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Perez",
+   "provider": "Liam Young",
+   "date": "2024-08-12",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Perez",
+   "provider": "Aiden King",
+   "date": "2024-08-27",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM",
+    "sp90"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Perez",
+   "provider": "Aiden King",
+   "date": "2024-09-17",
+   "valid_codes": 4,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Perez",
+   "provider": "Noah Lee",
+   "date": "2024-08-16",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Perez",
+   "provider": "Noah Lee",
+   "date": "2024-08-30",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Perez",
+   "provider": "Noah Lee",
+   "date": "2024-08-23",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Carter Jones",
+   "provider": "Aiden King",
+   "date": "2024-08-02",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Lee",
+   "provider": "Aiden King",
+   "date": "2024-08-23",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM",
+    "sp90"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Perez",
+   "provider": "Noah Lee",
+   "date": "2024-09-25",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM",
+    "sp90"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Lee",
+   "provider": "Aiden King",
+   "date": "2024-07-29",
+   "valid_codes": 4,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 488.59,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Carter Taylor",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-16",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 459.33,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Miller",
+   "provider": "Sebastian Miller",
+   "date": "2024-07-08",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM",
+    "SP110"
+   ],
+   "value": 409.17,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Zoey Lopez",
+   "provider": "Charlotte Williams",
+   "date": "2024-07-18",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 409.17,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Zoey Perez",
+   "provider": "Charlotte Williams",
+   "date": "2024-08-14",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 409.17,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Noah Lee",
+   "date": "2024-07-31",
+   "valid_codes": 4,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 389.65,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Aiden Allen",
+   "provider": "Aiden King",
+   "date": "2024-09-10",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 389.58,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Miller",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-08",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM",
+    "SP90"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Noah Lee",
+   "date": "2024-08-06",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Noah Moore",
+   "provider": "Aiden King",
+   "date": "2024-09-11",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM",
+    "sp90"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Moore",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-20",
+   "valid_codes": 2,
+   "junk_codes": [
+    "SP$90",
+    "NORCM"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Miller",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-26",
+   "valid_codes": 3,
+   "junk_codes": [
+    "SP90",
+    "NORCM"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Noah Moore",
+   "provider": "Aiden King",
+   "date": "2024-08-26",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM",
+    "sp90"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Miller",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-29",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM",
+    "SP90"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Miller",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-01",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM",
+    "SP90"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-09-24",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-09-26",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Moore",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-24",
+   "valid_codes": 2,
+   "junk_codes": [
+    "SP$90",
+    "NORCM"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Moore",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-26",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM",
+    "SP$90"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Noah Moore",
+   "provider": "Aiden King",
+   "date": "2024-09-04",
+   "valid_codes": 3,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Moore",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-23",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM",
+    "SP$90"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Miller",
+   "provider": "Sebastian Miller",
+   "date": "2024-07-23",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM",
+    "SP90"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Miller",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-15",
+   "valid_codes": 3,
+   "junk_codes": [
+    "SP90",
+    "NORCM"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Noah Moore",
+   "provider": "Aiden King",
+   "date": "2024-09-18",
+   "valid_codes": 3,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Olivia Moore",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-16",
+   "valid_codes": 2,
+   "junk_codes": [
+    "SP$90",
+    "NORCM"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-09-18",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-07-29",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 388.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Liam Wilson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-09",
+   "valid_codes": 3,
+   "junk_codes": [
+    "SP$90",
+    "NORCM"
+   ],
+   "value": 358.89,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mason Clark",
+   "provider": "Aiden King",
+   "date": "2024-08-07",
+   "valid_codes": 3,
+   "junk_codes": [
+    "TOS",
+    "NORCM"
+   ],
+   "value": 358.89,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mason Turner",
+   "provider": "Sebastian Martinez",
+   "date": "2024-09-24",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 355.07,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mia Brown",
+   "provider": "Julian Lee",
+   "date": "2024-09-11",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 355.07,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Scarlett Miller",
+   "provider": "Julian Lee",
+   "date": "2024-08-27",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 355.07,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sophia Young",
+   "provider": "Sebastian Martinez",
+   "date": "2024-09-17",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 325.33,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sophia Young",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-27",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 325.33,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sophia Young",
+   "provider": "Sebastian Martinez",
+   "date": "2024-09-03",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 325.33,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Zoey Martin",
+   "provider": "Aiden King",
+   "date": "2024-07-01",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM",
+    "sp90"
+   ],
+   "value": 322.88,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Zoey Martin",
+   "provider": "Aiden King",
+   "date": "2024-07-15",
+   "valid_codes": 3,
+   "junk_codes": [
+    "sp90",
+    "NORCM"
+   ],
+   "value": 322.88,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Zoey Martin",
+   "provider": "Aiden King",
+   "date": "2024-09-30",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM",
+    "sp90"
+   ],
+   "value": 322.88,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Zoey Martin",
+   "provider": "Aiden King",
+   "date": "2024-07-29",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM",
+    "sp90"
+   ],
+   "value": 322.88,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Zoey Martin",
+   "provider": "Aiden King",
+   "date": "2024-08-15",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM",
+    "sp90"
+   ],
+   "value": 322.88,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Aiden King",
+   "date": "2024-08-02",
+   "valid_codes": 1,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 289.14,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Aiden King",
+   "date": "2024-08-28",
+   "valid_codes": 1,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 289.14,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Aiden King",
+   "date": "2024-08-09",
+   "valid_codes": 1,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 289.14,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Aiden Allen",
+   "provider": "Aiden King",
+   "date": "2024-08-28",
+   "valid_codes": 1,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 289.14,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Aiden King",
+   "date": "2024-08-22",
+   "valid_codes": 1,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 289.14,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Aiden Allen",
+   "provider": "Aiden King",
+   "date": "2024-09-04",
+   "valid_codes": 1,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 289.14,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Aiden King",
+   "date": "2024-07-18",
+   "valid_codes": 1,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 289.14,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Aiden Allen",
+   "provider": "Aiden King",
+   "date": "2024-09-25",
+   "valid_codes": 1,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 289.14,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Noah Gonzalez",
+   "provider": "Elijah Johnson",
+   "date": "2024-08-01",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 266.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Noah Gonzalez",
+   "provider": "Elijah Johnson",
+   "date": "2024-07-25",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 266.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Noah Gonzalez",
+   "provider": "Elijah Johnson",
+   "date": "2024-07-18",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 266.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Isabella Thomas",
+   "provider": "Elijah Johnson",
+   "date": "2024-08-01",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 266.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mia Brown",
+   "provider": "Julian Lee",
+   "date": "2024-09-25",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 266.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Noah Gonzalez",
+   "provider": "Elijah Johnson",
+   "date": "2024-07-16",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 266.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Carter Taylor",
+   "provider": "Julian Lee",
+   "date": "2024-09-13",
+   "valid_codes": 3,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 266.15,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Julian King",
+   "provider": "Noah Lee",
+   "date": "2024-08-28",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 222.44,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-07-18",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 222.44,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Noah Young",
+   "provider": "Noah Lee",
+   "date": "2024-09-27",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 222.44,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-07-22",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 222.44,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "David Jones",
+   "provider": "Aiden King",
+   "date": "2024-09-27",
+   "valid_codes": 2,
+   "junk_codes": [
+    "SP90"
+   ],
+   "value": 222.44,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Moore",
+   "provider": "Aiden King",
+   "date": "2024-07-10",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 222.44,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-07-02",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 222.44,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Moore",
+   "provider": "Aiden King",
+   "date": "2024-07-30",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 222.44,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-08-05",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 222.44,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Noah Young",
+   "provider": "Noah Lee",
+   "date": "2024-09-06",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 222.44,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-07-05",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 222.44,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Julian King",
+   "provider": "Noah Lee",
+   "date": "2024-09-11",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 222.44,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Sebastian Jones",
+   "provider": "Julian Lee",
+   "date": "2024-09-10",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 189.36,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Mia Brown",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-19",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 165.71,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Zoey Lopez",
+   "provider": "Julian Lee",
+   "date": "2024-09-06",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 165.71,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Zoey Lopez",
+   "provider": "Charlotte Williams",
+   "date": "2024-08-23",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 165.71,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Zoey Lopez",
+   "provider": "Charlotte Williams",
+   "date": "2024-08-14",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 165.71,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ethan Hernandez",
+   "provider": "Julian Lee",
+   "date": "2024-08-21",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 165.71,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Zoey Lopez",
+   "provider": "Charlotte Williams",
+   "date": "2024-07-31",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 165.71,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Carter Jones",
+   "provider": "Julian Lee",
+   "date": "2024-07-26",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 165.71,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Carter Turner",
+   "provider": "Julian Lee",
+   "date": "2024-09-20",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 165.71,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Zoey Perez",
+   "provider": "Charlotte Williams",
+   "date": "2024-08-21",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 165.71,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Carter Turner",
+   "provider": "Julian Lee",
+   "date": "2024-09-24",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 165.71,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Noah Lee",
+   "date": "2024-08-27",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 100.44,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Aiden Allen",
+   "provider": "Noah Lee",
+   "date": "2024-09-25",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 100.44,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Aiden King",
+   "date": "2024-08-15",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 100.44,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Aiden Allen",
+   "provider": "Noah Lee",
+   "date": "2024-08-30",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 100.44,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Aiden Allen",
+   "provider": "Noah Lee",
+   "date": "2024-09-06",
+   "valid_codes": 2,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 100.44,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-12",
+   "valid_codes": 1,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 0,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Noah Lee",
+   "date": "2024-08-15",
+   "valid_codes": 1,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 0,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Noah Lee",
+   "date": "2024-08-20",
+   "valid_codes": 1,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 0,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-08-19",
+   "valid_codes": 1,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 0,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-09-04",
+   "valid_codes": 1,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 0,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-08-27",
+   "valid_codes": 1,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 0,
+   "severity": "High",
+   "action": "Scrub & rebill - valid lines recoverable now"
+  },
+  {
+   "patient": "Emma Miller",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-10",
+   "valid_codes": 0,
+   "junk_codes": [
+    "NORCM",
+    "SP"
+   ],
+   "value": 0,
+   "severity": "Low",
+   "action": "Auto-close - no billable content, flag for config cleanup"
+  },
+  {
+   "patient": "Ethan Smith",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-14",
+   "valid_codes": 0,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 0,
+   "severity": "Low",
+   "action": "Auto-close - no billable content, flag for config cleanup"
+  },
+  {
+   "patient": "Sebastian Anderson",
+   "provider": "Sebastian Martinez",
+   "date": "2024-09-06",
+   "valid_codes": 0,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 0,
+   "severity": "Low",
+   "action": "Auto-close - no billable content, flag for config cleanup"
+  },
+  {
+   "patient": "Sebastian Anderson",
+   "provider": "Sebastian Martinez",
+   "date": "2024-09-16",
+   "valid_codes": 0,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 0,
+   "severity": "Low",
+   "action": "Auto-close - no billable content, flag for config cleanup"
+  },
+  {
+   "patient": "Sebastian Anderson",
+   "provider": "Sebastian Martinez",
+   "date": "2024-09-20",
+   "valid_codes": 0,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 0,
+   "severity": "Low",
+   "action": "Auto-close - no billable content, flag for config cleanup"
+  },
+  {
+   "patient": "Ethan Smith",
+   "provider": "Sebastian Martinez",
+   "date": "2024-07-03",
+   "valid_codes": 0,
+   "junk_codes": [
+    "NORCM"
+   ],
+   "value": 0,
+   "severity": "Low",
+   "action": "Auto-close - no billable content, flag for config cleanup"
+  }
+ ],
+ "malformed": [
+  {
+   "patient": "Scarlett Smith",
+   "provider": "(blank)",
+   "date": "(blank)",
+   "cpt": "(blank)"
+  },
+  {
+   "patient": "Scarlett Smith",
+   "provider": "(blank)",
+   "date": "(blank)",
+   "cpt": "(blank)"
+  }
+ ],
+ "families": {
+  "New Patient E/M": {
+   "lines": 6710,
+   "value": 846755.24
+  },
+  "Established Patient E/M": {
+   "lines": 10670,
+   "value": 2053029.84
+  },
+  "Chronic Care Mgmt": {
+   "lines": 695,
+   "value": 155048.36
+  },
+  "Adjunct & other services": {
+   "lines": 6805,
+   "value": 74479.08
+  },
+  "Telemedicine / modifier": {
+   "lines": 759,
+   "value": 50678.43
+  },
+  "Non-billable / unmapped": {
+   "lines": 315,
+   "value": 0
+  }
+ }
+}

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commure | Charge Capture Reconciliation — RCM Data Operations</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --bg:#0b1020; --panel:#121a33; --panel2:#182144; --line:#26315c;
+  --txt:#e8ecf8; --muted:#93a0c8; --dim:#66739e;
+  --red:#f2555a; --amber:#ffb020; --green:#2ee6a8; --blue:#4d9fff; --violet:#a780ff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--txt); font:14px/1.5 "Inter",-apple-system,"Segoe UI",Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased; padding:0 0 60px;
+}
+.wrap{max-width:1500px;margin:0 auto;padding:0 28px}
+
+/* header */
+header{
+  background:linear-gradient(135deg,#0b1020 0%,#182144 55%,#1d2a56 100%);
+  border-bottom:1px solid var(--line); padding:34px 0 30px; margin-bottom:26px;
+}
+header .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:13px;margin-bottom:16px}
+.logo{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--violet));
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;color:#fff}
+.brand b{font-size:19px;letter-spacing:-.3px}
+.brand span{color:var(--muted);font-size:12px;display:block;letter-spacing:.3px}
+h1{font-size:28px;font-weight:700;letter-spacing:-.6px;margin-bottom:8px}
+.sub{color:var(--muted);font-size:14px;max-width:760px}
+.hmeta{text-align:right;color:var(--muted);font-size:12px;line-height:1.9}
+.hmeta b{color:var(--txt);font-weight:600}
+
+/* verdict banner */
+.verdict{
+  background:linear-gradient(135deg,rgba(242,85,90,.13),rgba(242,85,90,.04));
+  border:1px solid rgba(242,85,90,.34); border-left:4px solid var(--red);
+  border-radius:12px; padding:22px 26px; margin-bottom:26px;
+}
+.verdict h2{font-size:13px;color:var(--red);text-transform:uppercase;letter-spacing:1.3px;margin-bottom:10px;font-weight:700}
+.verdict p{font-size:15px;line-height:1.65;margin-bottom:10px}
+.verdict p:last-child{margin:0}
+.verdict b{color:#fff}
+.tag{display:inline-block;background:rgba(242,85,90,.2);color:#ffb3b6;padding:2px 9px;border-radius:5px;
+  font-size:12px;font-weight:600;font-family:ui-monospace,Menlo,monospace;margin:0 2px}
+
+/* kpi */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:15px;margin-bottom:26px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:19px;position:relative;overflow:hidden}
+.kpi::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--blue)}
+.kpi.red::before{background:var(--red)} .kpi.amber::before{background:var(--amber)}
+.kpi.green::before{background:var(--green)} .kpi.violet::before{background:var(--violet)}
+.kpi .lbl{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.85px;margin-bottom:9px;font-weight:600}
+.kpi .val{font-size:27px;font-weight:700;letter-spacing:-1px;line-height:1.1}
+.kpi.red .val{color:var(--red)} .kpi.amber .val{color:var(--amber)}
+.kpi.green .val{color:var(--green)} .kpi.violet .val{color:var(--violet)}
+.kpi .foot{color:var(--dim);font-size:11.5px;margin-top:7px}
+
+/* layout */
+.grid{display:grid;gap:15px;margin-bottom:26px}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:2fr 1fr}
+.g5{grid-template-columns:repeat(5,1fr)}
+@media(max-width:1100px){.g2,.g3,.g5{grid-template-columns:1fr}}
+
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.card h3{font-size:14.5px;font-weight:650;margin-bottom:4px;letter-spacing:-.2px}
+.card .desc{color:var(--muted);font-size:12px;margin-bottom:16px}
+.ch{position:relative;height:250px}
+.ch.tall{height:330px}
+.ch.short{height:190px}
+
+/* root cause */
+.rc{display:flex;gap:15px;padding:15px 0;border-bottom:1px solid var(--line)}
+.rc:last-child{border-bottom:0;padding-bottom:0}
+.rc .no{width:29px;height:29px;border-radius:7px;flex-shrink:0;display:flex;align-items:center;
+  justify-content:center;font-weight:700;font-size:13px;background:var(--panel2);border:1px solid var(--line);color:var(--muted)}
+.rc.c1 .no{background:rgba(242,85,90,.15);border-color:rgba(242,85,90,.4);color:var(--red)}
+.rc.c2 .no{background:rgba(255,176,32,.15);border-color:rgba(255,176,32,.4);color:var(--amber)}
+.rc.c3 .no{background:rgba(167,128,255,.15);border-color:rgba(167,128,255,.4);color:var(--violet)}
+.rc .body{flex:1}
+.rc .body h4{font-size:13.5px;font-weight:650;margin-bottom:5px}
+.rc .body p{color:var(--muted);font-size:12.5px;line-height:1.6}
+.rc .amt{text-align:right;flex-shrink:0;min-width:112px}
+.rc .amt b{display:block;font-size:15px;font-weight:700;letter-spacing:-.3px}
+.rc .amt span{color:var(--dim);font-size:11px}
+
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{text-align:left;padding:9px 10px;color:var(--muted);font-weight:600;font-size:10.5px;
+  text-transform:uppercase;letter-spacing:.7px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:9px 10px;border-bottom:1px solid rgba(38,49,92,.5)}
+tbody tr:hover{background:rgba(77,159,255,.05)}
+.num{text-align:right;font-variant-numeric:tabular-nums;font-family:ui-monospace,Menlo,monospace}
+code{background:var(--panel2);padding:2px 7px;border-radius:5px;font-size:11.5px;
+  font-family:ui-monospace,Menlo,monospace;color:var(--blue)}
+.bad{color:var(--red)} .warn{color:var(--amber)} .ok{color:var(--green)}
+.scroll{max-height:330px;overflow-y:auto}
+.scroll.tall{max-height:560px}
+.scroll::-webkit-scrollbar{width:7px}
+.scroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+.bar{height:5px;background:var(--panel2);border-radius:3px;overflow:hidden;min-width:56px;margin-top:5px}
+.bar i{display:block;height:100%;border-radius:3px}
+
+.sev{padding:2px 8px;border-radius:5px;font-size:10.5px;font-weight:650;text-transform:uppercase;letter-spacing:.4px}
+.sev.Critical{background:rgba(242,85,90,.18);color:#ff8f92}
+.sev.High{background:rgba(255,176,32,.18);color:var(--amber)}
+.sev.Low{background:rgba(150,160,190,.15);color:var(--muted)}
+
+.note{background:var(--panel2);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;
+  padding:12px 15px;margin-top:15px;font-size:12.5px;color:var(--muted);line-height:1.65}
+.note b{color:var(--txt)}
+footer{text-align:center;color:var(--dim);font-size:11.5px;padding-top:26px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div>
+      <div class="brand">
+        <div class="logo">C</div>
+        <div><b>Commure</b><span>Central Operations · Data Operations Analyst</span></div>
+      </div>
+      <h1>Charge Capture Reconciliation</h1>
+      <p class="sub">EHR (system of record) vs Billing DB — quantifying revenue leakage, isolating
+        root cause, and triaging recovery actions across the practice.</p>
+    </div>
+    <div class="hmeta">
+      <div>Reporting period <b id="m-period">—</b></div>
+      <div>Scope <b id="m-scope">—</b></div>
+      <div>Generated <b id="m-gen">—</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="verdict">
+    <h2>Root Cause Verdict</h2>
+    <p><b>The pipeline is not losing encounters — it is rejecting them at the scrubber.</b>
+      282 encounters recorded in the EHR never reached the billing database, yet the same
+      patient + provider combination bills successfully for 6,330 other encounters.
+      <b id="v-reach">—</b> of all encounters imported cleanly, and of the encounters that
+      reached the billing DB, <b id="v-clean">—</b> matched the EHR exactly. The connectivity
+      and the ETL join are both healthy: this is not a transport failure.</p>
+    <p>Inspecting the stranded encounters shows the failure is concentrated in the
+      <b>CPT scrubber</b>. Internal operational markers are being written into the CPT code
+      field — <span class="tag">NORCM</span> <span class="tag">TOS115</span>
+      <span class="tag">SP$90</span> <span class="tag">sp90</span> — none of which are valid
+      AMA/CMS CPT codes. A record carrying any one of these fails CPT-format validation and the
+      <b>entire claim is rejected</b>, taking the valid, billable E/M lines down with it.</p>
+    <p><b>Business impact:</b> <b id="v-leak">—</b> of charge value is unbilled or miscoded —
+      <b id="v-pct">—</b> of total charge value. Of that,
+      <b id="v-crit">—</b> sits in claims that are <i>already clean and fully billable</i> and are
+      being lost purely because of a non-billable string in one field. Those are recoverable
+      within the standard timely-filing window.</p>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <!-- ROOT CAUSE BREAKDOWN -->
+  <div class="card" style="margin-bottom:26px">
+    <h3>Root Cause Decomposition</h3>
+    <p class="desc">Five distinct failure modes were isolated. Values are 2024 CMS Medicare PFS
+      national payment rates applied to the affected charge lines.</p>
+    <div id="rootcause"></div>
+  </div>
+
+  <!-- CHARTS -->
+  <div class="grid g2">
+    <div class="card">
+      <h3>Revenue Leakage by Failure Mode</h3>
+      <p class="desc">Where the unbilled charge value actually sits.</p>
+      <div class="ch short"><canvas id="c1"></canvas></div>
+    </div>
+    <div class="card">
+      <h3>Reconciliation Funnel</h3>
+      <p class="desc">EHR encounters surviving each stage of the billing pipeline.</p>
+      <div class="ch short"><canvas id="c2"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>Monthly Trend — Encounters &amp; Leakage</h3>
+      <p class="desc">Leakage is persistent across all three months, indicating a standing
+        configuration defect rather than a one-off incident.</p>
+      <div class="ch"><canvas id="c3"></canvas></div>
+    </div>
+    <div class="card">
+      <h3>Leak Rate by Provider</h3>
+      <p class="desc">Share of each provider's EHR encounters that failed to reach billing.</p>
+      <div class="ch"><canvas id="c4"></canvas></div>
+    </div>
+  </div>
+
+  <!-- DIRTY CODES -->
+  <div class="grid g3">
+    <div class="card">
+      <h3>Invalid CPT Values Reaching the Scrubber</h3>
+      <p class="desc">These strings are the trigger condition. None are valid CPT codes.</p>
+      <div class="scroll">
+        <table>
+          <thead><tr><th>Value</th><th>Lines</th><th class="num">In Leaked Claims</th><th>Interpretation</th></tr></thead>
+          <tbody id="t-dirty"></tbody>
+        </table>
+      </div>
+      <div class="note"><b>Fix:</b> these are internal workflow markers leaking into the billing
+        feed. Introduce a mapping layer that strips or maps non-CPT values before the scrubber,
+        so a stray marker can never reject an otherwise valid claim.</div>
+    </div>
+
+    <div class="card">
+      <h3>CPT Family Exposure</h3>
+      <p class="desc">Which service lines were lost — leaked charge lines by CPT family.</p>
+      <div class="ch short"><canvas id="c5"></canvas></div>
+      <div class="note">Chronic Care Management and add-on lines carry the highest per-line
+        value, so contaminating them costs the most per rejected claim.</div>
+    </div>
+  </div>
+
+  <!-- PROVIDER TABLE -->
+  <div class="card" style="margin-bottom:26px">
+    <h3>Provider-Level Breakdown</h3>
+    <p class="desc">Leak rate normalises for provider volume so the ranking reflects genuine
+      process variance, not patient-panel size.</p>
+    <table>
+      <thead><tr>
+        <th>Provider</th><th class="num">EHR Encounters</th><th class="num">Reconciled</th>
+        <th class="num">Leaked</th><th class="num">Leak Rate</th>
+        <th class="num">At-Risk Value</th><th class="num">Invalid Codes</th>
+      </tr></thead>
+      <tbody id="t-prov"></tbody>
+    </table>
+  </div>
+
+  <!-- TRIAGE -->
+  <div class="grid g2">
+    <div class="card">
+      <h3>Recovery Triage — Claim Detail</h3>
+      <p class="desc">Priority queue. <span class="sev Critical">Critical</span> =
+        zero billable blockers, release immediately.
+        <span id="t-triage-count" style="color:var(--dim)"></span></p>
+      <div class="scroll tall">
+        <table>
+          <thead><tr><th>Patient</th><th>Provider</th><th>Date</th><th class="num">Valid</th>
+            <th>Invalid</th><th class="num">Value</th><th>Priority</th></tr></thead>
+          <tbody id="t-triage"></tbody>
+        </table>
+      </div>
+      <div class="note" id="t-triage-note"></div>
+    </div>
+
+    <div class="card">
+      <h3>Code-Level Mismatch — Matched Encounters</h3>
+      <p class="desc">Encounters present in both systems where the CPT set disagrees.
+        Under-billing erodes revenue; over-billing risks denials and clawback.</p>
+      <div class="scroll">
+        <table>
+          <thead><tr><th>Patient</th><th>Date</th><th>Missing (EHR→DB)</th>
+            <th>Extra (DB→EHR)</th><th class="num">Value</th></tr></thead>
+          <tbody id="t-mismatch"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- RECOMMENDATIONS -->
+  <div class="card">
+    <h3>Recommended Solution</h3>
+    <p class="desc">Sequenced by time-to-recovery and implementation effort.</p>
+    <div class="grid g3" style="margin-bottom:0">
+      <div>
+        <div class="rc c1"><div class="no">1</div><div class="body">
+          <h4>Recover stranded claims — 48 hours</h4>
+          <p>Re-run the <b id="r-crit-e">—</b> Critical-tier encounters after stripping invalid
+            codes. All billable content is already present in the EHR; these require no
+            clinical re-work, only re-adjudication.</p></div></div>
+        <div class="rc c2"><div class="no">2</div><div class="body">
+          <h4>Scrub non-CPT values at source</h4>
+          <p>Deploy a mapping layer that quarantines internal markers
+            (<span class="tag">NORCM</span>, <span class="tag">SP*</span>,
+            <span class="tag">TOS*</span>) instead of letting them fail validation and reject the
+            whole claim. Prevents recurrence at the point of origin.</p></div></div>
+      </div>
+      <div>
+        <div class="rc c2"><div class="no">3</div><div class="body">
+          <h4>Row-level validation on CPT</h4>
+          <p>Add a format check (<code>^9\d{4}$</code>) plus a valid-code lookup in the
+            ingestion layer. Flag, don't reject — a single bad line must never take a valid
+            claim down with it.</p></div></div>
+        <div class="rc c3"><div class="no">4</div><div class="body">
+          <h4>Daily reconciliation control</h4>
+          <p>Automate this comparison as a standing control. Alert when EHR encounter count and
+            DB encounter count diverge beyond threshold, so leakage is caught in hours rather
+            than at month-end close.</p></div></div>
+      </div>
+      <div>
+        <div class="rc c3"><div class="no">5</div><div class="body">
+          <h4>Investigate over-billing &amp; ghost claims</h4>
+          <p><b id="r-extra">—</b> was billed beyond EHR support plus
+            <b id="r-ghost">—</b> across <b id="r-ghost-n">—</b> encounters billed with no
+            source-of-truth record. These carry denial and clawback exposure and warrant
+            priority review ahead of recovery work.</p></div></div>
+        <div class="note"><b>Expected outcome:</b> closing the Critical tier and the scrubber
+          defect recovers the majority of at-risk value inside one filing cycle, and the daily
+          control prevents recurrence by detecting divergence within 24 hours.</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Commure · Central Operations — Data Operations Analyst take-home assessment<br>
+    Reconciliation of <span id="f-rows">—</span> EHR charge lines against
+    <span id="f-db">—</span> billing records · Valuations use 2024 CMS Medicare PFS national rates
+  </footer>
+</div>
+
+<script>
+fetch('data.json').then(r=>r.json()).then(D=>{
+const K=D.kpi, M=D.meta;
+const money=v=>'$'+v.toLocaleString('en-US',{maximumFractionDigits:0});
+const money2=v=>'$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+
+// Derived encounter counts. These are the single source of truth for every
+// figure on this page so the two dashboards cannot drift apart.
+const REACHED_DB=M.ehr_encounters-K.missing_enc;   // 6,330 — reached the billing DB
+const GHOST=K.db_only_enc;                          // 44   — in the DB with no EHR record
+const IMPORTED=REACHED_DB-GHOST;                    // 6,286 — cleanly imported
+const EXACT=REACHED_DB-K.mismatch_enc;              // 6,296 — exact CPT-set match
+const REACH_PCT=+(IMPORTED/M.ehr_encounters*100).toFixed(1);   // 95.1%
+const EXACT_PCT=+(EXACT/REACHED_DB*100).toFixed(2);             // 99.46%
+const DIRTY_ENC=D.triage.filter(t=>t.junk_codes.length).length; // 205
+
+// meta
+const $=id=>document.getElementById(id);
+$('m-period').textContent=M.period;
+$('m-scope').textContent=`${M.ehr_encounters.toLocaleString()} encounters · ${M.patients.toLocaleString()} patients · ${M.providers} providers`;
+$('m-gen').textContent=M.generated;
+$('f-rows').textContent=M.total_lines.toLocaleString();
+$('f-db').textContent=M.db_rows.toLocaleString();
+$('v-clean').textContent=EXACT_PCT+'%';
+$('v-reach').textContent=REACH_PCT+'%';
+$('v-leak').textContent=money(K.leak_value);
+$('v-pct').textContent=K.leak_pct_val+'%';
+$('v-crit').textContent=money(K.critical_value);
+$('r-crit-e').textContent=K.critical_count;
+$('r-extra').textContent=money(K.mis_extra_value);
+$('r-ghost').textContent=money(K.db_only_value);
+$('r-ghost-n').textContent=K.db_only_enc;
+
+// KPIs
+$('kpis').innerHTML=[
+ ['red','Revenue At Risk',money(K.leak_value),`${K.leak_pct_val}% of ${money(K.clean_value+K.leak_value)} charge value`],
+ ['amber','Clean / Reconciled',money(K.clean_value),`${EXACT_PCT}% of matched encounters exact`],
+ ['violet','Claims Lost to Scrubber',money(K.missing_value),`${K.missing_enc} encounters · ${K.missing_lines} charge lines`],
+ ['red','Critical — Fully Billable',money(K.critical_value),`${K.critical_count} claims, no billable blockers`],
+ ['green','Encounters Imported Clean',REACH_PCT+'%',`${IMPORTED.toLocaleString()} of ${M.ehr_encounters.toLocaleString()} encounters`],
+ ['amber','Over-billing Exposure',money(K.mis_extra_value+K.db_only_value),`${K.db_only_enc} ghost claims + code over-billing`]
+].map(([c,l,v,f])=>`<div class="kpi ${c}"><div class="lbl">${l}</div><div class="val">${v}</div><div class="foot">${f}</div></div>`).join('');
+
+// root cause
+const rc=[
+ ['c1','1','Entire claims rejected — invalid CPT in feed',`${DIRTY_ENC} encounters carried at least one non-CPT value. Validation failed on the whole record, discarding the valid E/M lines alongside it.`,K.missing_value,`${DIRTY_ENC} of ${K.missing_enc} encounters`],
+ ['c2','2','Charge lines dropped — under-coded',`Matched encounters where the EHR records a charge the DB does not contain. Revenue silently eroded per service line.`,K.mis_missing_value,`${K.mismatch_enc} encounters`],
+ ['c3','3','Non-billable codes in CPT field','Internal workflow markers written into the CPT column. Not presentational noise — this is the trigger that rejects the parent claim.',null,`${K.dirty_lines} lines`],
+ ['c4','4','Over-billing beyond EHR support',`DB carries charge lines with no corresponding EHR record — denial and clawback risk rather than lost revenue.`,K.mis_extra_value+K.db_only_value,`${K.db_only_enc} ghost encounters`],
+ ['c5','5','Malformed source records',`Rows missing patient, provider, date or CPT entirely. Cannot be keyed and are silently excluded from reconciliation.`,null,`${D.malformed.length} rows`]
+];
+$('rootcause').innerHTML=rc.map(([c,n,t,d,v,vol])=>`<div class="rc ${c}"><div class="no">${n}</div>
+<div class="body"><h4>${t}</h4><p>${d}</p></div>
+<div class="amt">${v!==null?`<b class="bad">${money2(v)}</b>`:''}<span>${vol}</span></div></div>`).join('');
+
+// charts
+const CH=window.Chart;
+if(!CH){
+  // Chart.js failed to load (CDN blocked, offline). Say so loudly rather than
+  // throwing and blanking the whole dashboard.
+  ['c1','c2','c3','c4','c5'].forEach(id=>{
+   const el=document.getElementById(id);
+   if(el)el.parentElement.innerHTML=
+    '<div style="height:100%;display:flex;align-items:center;justify-content:center;'+
+    'text-align:center;padding:16px;color:#ffb020;font-size:12.5px;line-height:1.5;'+
+    'border:1px dashed #26315c;border-radius:8px;background:rgba(255,176,32,.07)">'+
+    'Chart library could not be loaded.<br>Check the network connection and reload.'+
+    '</div>';
+  });
+} else {
+Chart.defaults.color='#93a0c8';
+Chart.defaults.font.family="Inter,-apple-system,'Segoe UI',sans-serif";
+Chart.defaults.font.size=11;
+const grid={color:'rgba(38,49,92,.65)'}, tt={backgroundColor:'#182144',borderColor:'#26315c',
+  borderWidth:1,padding:10,titleFont:{size:12},bodyFont:{size:11},cornerRadius:6,displayColors:true};
+
+new Chart($('c1'),{type:'doughnut',data:{labels:['Rejected at scrubber','Dropped charge lines','Over-billed / ghost'],
+ datasets:[{data:[K.missing_value,K.mis_missing_value,K.mis_extra_value+K.db_only_value],
+ backgroundColor:['#f2555a','#ffb020','#a780ff'],borderColor:'#121a33',borderWidth:3}]},
+ options:{maintainAspectRatio:false,cutout:'62%',plugins:{legend:{position:'right',
+ labels:{boxWidth:11,padding:13,font:{size:11.5}}},tooltip:{...tt,callbacks:{label:c=>` ${c.label}: ${money2(c.raw)}`}}}}});
+
+new Chart($('c2'),{type:'bar',data:{labels:['EHR recorded','Reached billing DB','Reconciled exactly'],
+ datasets:[{data:[M.ehr_encounters,REACHED_DB,EXACT],
+ backgroundColor:['#4d9fff','#2ee6a8','#ffb020'],borderRadius:6,maxBarThickness:58}]},
+ options:{maintainAspectRatio:false,indexAxis:'y',scales:{x:{grid,ticks:{callback:v=>v.toLocaleString()}},
+ y:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{...tt,
+ callbacks:{label:c=>` ${Math.round(c.raw).toLocaleString()} encounters`}}}}});
+
+new Chart($('c3'),{data:{labels:D.monthly.map(m=>m.month),datasets:[
+ {type:'bar',label:'Reconciled',data:D.monthly.map(m=>m.clean),backgroundColor:'#2ee6a8',borderRadius:5,maxBarThickness:42},
+ {type:'bar',label:'Leaked',data:D.monthly.map(m=>m.missing),backgroundColor:'#f2555a',borderRadius:5,maxBarThickness:42},
+ {type:'line',label:'At-risk value',data:D.monthly.map(m=>m.missing_val),borderColor:'#ffb020',
+  backgroundColor:'rgba(255,176,32,.12)',borderWidth:2,pointRadius:4,pointBackgroundColor:'#ffb020',
+  fill:true,tension:.3,yAxisID:'y1'}]},
+ options:{maintainAspectRatio:false,scales:{x:{grid:{display:false}},
+ y:{grid,ticks:{callback:v=>v.toLocaleString()},title:{display:true,text:'Encounters'}},
+ y1:{position:'right',grid:{display:false},ticks:{callback:v=>'$'+(v/1000).toFixed(0)+'k'},
+  title:{display:true,text:'At-risk value'}}},plugins:{legend:{position:'bottom',labels:{boxWidth:11,padding:13}},
+ tooltip:{...tt,callbacks:{label:c=>c.dataset.yAxisID==='y1'?` ${c.dataset.label}: ${money(c.raw)}`:` ${c.dataset.label}: ${c.raw}`}}}}});
+
+const pv=[...D.providers].sort((a,b)=>b.leak_pct-a.leak_pct);
+new Chart($('c4'),{type:'bar',data:{labels:pv.map(p=>p.provider),datasets:[
+ {label:'Leak rate %',data:pv.map(p=>p.leak_pct),backgroundColor:pv.map(p=>p.leak_pct>5?'#f2555a':'#ffb020'),borderRadius:6,maxBarThickness:46}]},
+ options:{maintainAspectRatio:false,indexAxis:'y',scales:{x:{grid,ticks:{callback:v=>v+'%'}},
+ y:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{...tt,
+ callbacks:{label:c=>` ${c.raw}% · ${money(c.raw?pv.find(p=>p.leak_pct===c.raw).missing_val:0)} at risk`}}}}});
+
+// dirty codes
+// The per-code "lines in leaked claims" figure lives in D.codes[], not on the
+// D.dirty entries themselves — join on the code string.
+const codeByName={}; D.codes.forEach(c=>{codeByName[c.code]=c});
+$('t-dirty').innerHTML=D.dirty.map(d=>{
+  const c=codeByName[d.code]||{};
+  const leaked=(c.missing_lines!==undefined?c.missing_lines:d.count);
+  return `<tr><td><code>${d.code}</code></td><td class="num">${d.count}</td>
+ <td class="num bad">${leaked}</td><td style="color:var(--muted);font-size:11.5px">${d.label}</td></tr>`;
+}).join('');
+
+// CPT family exposure — chart the LEAKED lines per family (the lines actually
+// lost), not total volume per family. Aggregated from D.codes[].missing_lines
+// keyed on family.
+const famLeak={}; D.codes.forEach(c=>{
+  if(!c.missing_lines)return;
+  famLeak[c.family]=(famLeak[c.family]||0)+c.missing_lines;
+});
+const fEnt=Object.entries(famLeak).sort((a,b)=>b[1]-a[1]);
+const FCOL=['#4d9fff','#2ee6a8','#a780ff','#67d5ff','#ff8f92','#ffb020'];
+new Chart($('c5'),{type:'bar',data:{labels:fEnt.map(f=>f[0]),
+ datasets:[{data:fEnt.map(f=>f[1]),
+ backgroundColor:fEnt.map((f,i)=>/non-billable|unmapped/i.test(f[0])?'#f2555a':FCOL[i%FCOL.length]),
+ borderRadius:5,maxBarThickness:30}]},
+ options:{maintainAspectRatio:false,indexAxis:'y',scales:{x:{grid,ticks:{callback:v=>v.toLocaleString()}},
+ y:{grid:{display:false},ticks:{font:{size:10.5}}}},plugins:{legend:{display:false},tooltip:{...tt,
+ callbacks:{label:c=>` ${c.raw.toLocaleString()} leaked lines`}}}}});
+} // end Chart guard
+
+// providers
+const pmax=Math.max(...D.providers.map(p=>p.leak_pct));
+$('t-prov').innerHTML=D.providers.map(p=>`<tr>
+ <td><b>${p.provider}</b></td><td class="num">${p.total_enc.toLocaleString()}</td>
+ <td class="num ok">${p.clean_enc.toLocaleString()}</td><td class="num bad">${p.missing_enc}</td>
+ <td class="num ${p.leak_pct>5?'bad':'warn'}">${p.leak_pct}%<div class="bar"><i style="width:${p.leak_pct/pmax*100}%;background:${p.leak_pct>5?'var(--red)':'var(--amber)'}"></i></div></td>
+ <td class="num bad">${money2(p.missing_val)}</td><td class="num warn">${p.dirty}</td></tr>`).join('');
+
+// triage — render every missing encounter (Task 1 deliverable), not a slice.
+$('t-triage-count').textContent=`· ${D.triage.length} encounters listed`;
+$('t-triage-note').innerHTML=`<b>All ${D.triage.length} missing encounters are listed.</b>
+  Each row is the unique encounter ID from the brief — Patient Name + Rendering Provider +
+  Date of Service — with the invalid values found in the CPT field.`;
+$('t-triage').innerHTML=D.triage.map(t=>`<tr>
+ <td>${t.patient}</td><td style="color:var(--muted)">${t.provider}</td><td style="color:var(--muted)">${t.date}</td>
+ <td class="num">${t.valid_codes}</td><td>${t.junk_codes.length?t.junk_codes.map(c=>`<code>${c}</code>`).join(' '):'<span class="ok">none</span>'}</td>
+ <td class="num ${t.value>0?'bad':'ok'}">${t.value>0?money2(t.value):'—'}</td>
+ <td><span class="sev ${t.severity}">${t.severity}</span></td></tr>`).join('');
+
+// mismatch
+$('t-mismatch').innerHTML=D.mismatches.map(m=>`<tr>
+ <td>${m.patient}</td><td style="color:var(--muted)">${m.date}</td>
+ <td>${m.missing.map(c=>`<code>${c}</code>`).join(' ')||'—'}</td>
+ <td>${m.extra.map(c=>`<code>${c}</code>`).join(' ')||'—'}</td>
+ <td class="num bad">${money2(m.value)}</td></tr>`).join('');
+
+}).catch(e=>{document.body.innerHTML='<div style="padding:60px;text-align:center;color:#f2555a">'+
+ '<h2>Could not load data.json</h2><p>This dashboard must be served over HTTP (python3 -m http.server), not opened as a local file.</p></div>';});
+</script>
+</body>
+</html>

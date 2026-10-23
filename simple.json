@@ -1,0 +1,3874 @@
+{
+ "generated": "23 Oct 2026, 17:17",
+ "period": "2024-07-01 to 2024-09-30",
+ "plain": {
+  "ehr_total": 6612,
+  "imported": 6374,
+  "missing": 282,
+  "missing_pct": 4.3,
+  "ghost": 44,
+  "clean_imported": 6286,
+  "success_pct": 95.1,
+  "lines_checked": 25954,
+  "value_at_risk": 138893.98,
+  "recoverable_now": 39744.33,
+  "overbilled": 31162.39,
+  "invalid_values": 11,
+  "invalid_lines": 315,
+  "patients": 542,
+  "providers": 8,
+  "date_start": "2024-07-01",
+  "date_end": "2024-09-30"
+ },
+ "stages": [
+  {
+   "name": "1. Extractions",
+   "desc": "Pull data from the client's EHR",
+   "auto": "99% automated",
+   "broken": false
+  },
+  {
+   "name": "2. Submissions",
+   "desc": "Format, scrub and import into Normandy",
+   "auto": "99% automated",
+   "broken": true
+  },
+  {
+   "name": "3. Reconciliation",
+   "desc": "Match what was imported against the EHR",
+   "auto": "85% automated",
+   "broken": false
+  },
+  {
+   "name": "4. Denials",
+   "desc": "Investigate claims that were rejected",
+   "auto": "0% automated",
+   "broken": false
+  }
+ ],
+ "reasons": [
+  {
+   "reason": "Invalid code in CPT field",
+   "count": 205,
+   "pct": 72.7
+  },
+  {
+   "reason": "No visible data defect",
+   "count": 77,
+   "pct": 27.3
+  }
+ ],
+ "missing_list": [
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-30",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 896.48,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Mateo Jackson",
+   "provider": "Noah Lee",
+   "date": "2024-09-17",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 824.79,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Aiden Clark",
+   "provider": "Noah Lee",
+   "date": "2024-09-06",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 681.77,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-08-02",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 681.77,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Noah Lee",
+   "date": "2024-07-30",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 681.77,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-07-22",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 681.77,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-07-26",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 681.77,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Aiden Clark",
+   "provider": "Liam Young",
+   "date": "2024-09-04",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 681.77,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-07-23",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 681.77,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-03",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 674.04,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-20",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 674.04,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-10",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 674.04,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-24",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 674.04,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-27",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 674.04,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-17",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 674.04,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-08-30",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 674.04,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-06",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 674.04,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-09-13",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 674.04,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Sophia Smith",
+   "provider": "Noah Lee",
+   "date": "2024-09-19",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 648.69,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Sophia Hernandez",
+   "provider": "Aiden King",
+   "date": "2024-08-20",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 577.51,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Olivia Johnson",
+   "provider": "Aiden King",
+   "date": "2024-08-13",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 555.36,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-08-29",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 555.36,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-09-04",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 555.36,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-08-14",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 555.36,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-08-22",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 555.36,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-09-18",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 555.36,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Noah Lee",
+   "date": "2024-08-12",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 555.36,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-09-11",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 555.36,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Noah Lee",
+   "date": "2024-08-08",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 555.36,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-09-02",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 555.36,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-08-26",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 555.36,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Scarlett Allen",
+   "provider": "Aiden King",
+   "date": "2024-07-10",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 555.36,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-09-25",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 555.36,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Noah Lee",
+   "date": "2024-08-02",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 555.36,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Noah Lee",
+   "date": "2024-07-30",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 555.36,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Carter Lee",
+   "provider": "Liam Young",
+   "date": "2024-08-05",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 555.36,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-08-27",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 508.33,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Harper Hernandez",
+   "provider": "Sebastian Miller",
+   "date": "2024-07-08",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Mateo Thomas",
+   "provider": "Aiden King",
+   "date": "2024-08-01",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Miller",
+   "provider": "Aiden King",
+   "date": "2024-07-25",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Elijah Thomas",
+   "provider": "Liam Young",
+   "date": "2024-09-25",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Olivia Martin",
+   "provider": "Noah Lee",
+   "date": "2024-09-03",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Olivia Martin",
+   "provider": "Aiden King",
+   "date": "2024-09-24",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Olivia Martin",
+   "provider": "Noah Lee",
+   "date": "2024-09-20",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Olivia Martin",
+   "provider": "Noah Lee",
+   "date": "2024-09-13",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Mateo Thomas",
+   "provider": "Sebastian Martinez",
+   "date": "2024-07-08",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Harper Hernandez",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-05",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Miller",
+   "provider": "Aiden King",
+   "date": "2024-08-28",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Olivia Martin",
+   "provider": "Noah Lee",
+   "date": "2024-09-10",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Miller",
+   "provider": "Julian Lee",
+   "date": "2024-07-12",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Mateo Thomas",
+   "provider": "Sebastian Miller",
+   "date": "2024-07-01",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Miller",
+   "provider": "Aiden King",
+   "date": "2024-07-16",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Noah Lopez",
+   "provider": "Aiden King",
+   "date": "2024-07-23",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Olivia Martin",
+   "provider": "Aiden King",
+   "date": "2024-09-06",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Mateo Thomas",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-05",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Miller",
+   "provider": "Aiden King",
+   "date": "2024-08-14",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Miller",
+   "provider": "Aiden King",
+   "date": "2024-07-30",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Mason Miller",
+   "provider": "Liam Young",
+   "date": "2024-09-25",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 488.59,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Liam Taylor",
+   "provider": "Aiden King",
+   "date": "2024-07-24",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 465.9,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Zoe Miller",
+   "provider": "Sebastian Martinez",
+   "date": "2024-09-30",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 459.33,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-08-05",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 459.33,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Sophia Young",
+   "provider": "Noah Lee",
+   "date": "2024-08-16",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 437.15,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Sophia Young",
+   "provider": "Noah Lee",
+   "date": "2024-07-19",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 437.15,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Sophia Young",
+   "provider": "Noah Lee",
+   "date": "2024-08-02",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 437.15,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Isabella Brown",
+   "provider": "Noah Lee",
+   "date": "2024-09-23",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 409.17,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-07-10",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 409.17,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Mateo Johnson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-24",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 409.17,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Emma King",
+   "provider": "Aiden King",
+   "date": "2024-09-18",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 358.89,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Emma King",
+   "provider": "Aiden King",
+   "date": "2024-08-16",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 358.89,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Noah Lee",
+   "date": "2024-08-08",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 293.62,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Sophia Young",
+   "provider": "Aiden King",
+   "date": "2024-07-26",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 289.14,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Charlotte Turner",
+   "provider": "Liam Young",
+   "date": "2024-09-25",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 281.12,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Aiden Allen",
+   "provider": "Liam Young",
+   "date": "2024-09-25",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 266.15,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-07-18",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 165.71,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Layla Brown",
+   "provider": "Liam Young",
+   "date": "2024-07-16",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 165.71,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Noah Taylor",
+   "provider": "Noah Lee",
+   "date": "2024-07-09",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 100.44,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Noah Taylor",
+   "provider": "Noah Lee",
+   "date": "2024-07-18",
+   "reason": "No visible data defect",
+   "note": "Codes are all valid, yet never imported. Needs engineering review of the import log.",
+   "value": 100.44,
+   "severity": "Critical",
+   "codes": []
+  },
+  {
+   "patient": "Elijah Moore",
+   "provider": "Aiden King",
+   "date": "2024-07-30",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, sp90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 770.69,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "sp90"
+   ]
+  },
+  {
+   "patient": "Ava Anderson",
+   "provider": "Aiden King",
+   "date": "2024-07-10",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, sp120 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 751.87,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "sp120"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-07-18",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, TOS115 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "TOS115"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-03",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-09",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "SP",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-03",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker TOS115, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "TOS115",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Martinez",
+   "date": "2024-09-25",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP"
+   ]
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-08-19",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Charlotte Williams",
+   "date": "2024-07-23",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker TOS115, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "TOS115",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-08-05",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-08-09",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-07-29",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Carter Taylor",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-24",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-05",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-11",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "SP",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-08-08",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, TOS115 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "TOS115"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-23",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, TOS115 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "TOS115"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-19",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "SP",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Charlotte Williams",
+   "date": "2024-08-12",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-05",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-07-08",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker TOS115, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "TOS115",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Carter Taylor",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-30",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Julian Lee",
+   "date": "2024-08-30",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "SP",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-11",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, TOS115 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "TOS115"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-13",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, TOS115 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "TOS115"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-26",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "SP",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-08-30",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Charlotte Williams",
+   "date": "2024-08-28",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "SP",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-07-15",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-09-16",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ethan Martin",
+   "provider": "Noah Lee",
+   "date": "2024-07-25",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-27",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-16",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-09",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, TOS115 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "TOS115"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-21",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "SP",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-19",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "SP",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-23",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "SP",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-25",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, TOS115 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "TOS115"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Julian Lee",
+   "date": "2024-09-13",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "SP",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-07-31",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-05",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, TOS115 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "TOS115"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-08-01",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker TOS115, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "TOS115",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-07-17",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, TOS115 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "TOS115"
+   ]
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-07-24",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-08-06",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, TOS115 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "TOS115"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-07-05",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, TOS115 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "TOS115"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-07-10",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker TOS115, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "TOS115",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-08-26",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-29",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, TOS115 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "TOS115"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-17",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "SP",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-09-16",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker TOS115, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "TOS115",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-07-26",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, TOS115 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "TOS115"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-07-29",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, TOS115 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "TOS115"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-07",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "SP",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-08-22",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, TOS115 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "TOS115"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-26",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker TOS115, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "TOS115",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-09-18",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, TOS115 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "TOS115"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-14",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-08-15",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker TOS115, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "TOS115",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Carter Taylor",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-20",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-07-17",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Aiden King",
+   "date": "2024-08-09",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "SP",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Aiden King",
+   "date": "2024-08-20",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker TOS115, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "TOS115",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ethan Martin",
+   "provider": "Noah Lee",
+   "date": "2024-08-02",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "SP",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Scarlett Johnson",
+   "provider": "Aiden King",
+   "date": "2024-08-12",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, sp90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "sp90"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Charlotte Williams",
+   "date": "2024-08-26",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, TOS115 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "TOS115"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-23",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "SP",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Jackson",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-13",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker TOS115, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 681.77,
+   "severity": "High",
+   "codes": [
+    "TOS115",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Noah Gonzalez",
+   "provider": "Elijah Johnson",
+   "date": "2024-07-10",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 677.95,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Olivia Moore",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-21",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP$110 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 631.61,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP$110"
+   ]
+  },
+  {
+   "patient": "Sebastian Perez",
+   "provider": "Noah Lee",
+   "date": "2024-09-20",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 609.02,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-09-03",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 602.86,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-09-05",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 602.86,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-09-10",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 602.86,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-08-26",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 602.86,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-08-28",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 602.86,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-08-19",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 602.86,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-08-15",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 602.86,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Elijah Moore",
+   "provider": "Aiden King",
+   "date": "2024-08-14",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, sp90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 581.33,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "sp90"
+   ]
+  },
+  {
+   "patient": "Elijah Moore",
+   "provider": "Aiden King",
+   "date": "2024-09-18",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 581.33,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Elijah Moore",
+   "provider": "Aiden King",
+   "date": "2024-08-20",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 581.33,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Elijah Moore",
+   "provider": "Aiden King",
+   "date": "2024-08-07",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 581.33,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Liam Wilson",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-23",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP$90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 581.33,
+   "severity": "High",
+   "codes": [
+    "SP$90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Elijah Moore",
+   "provider": "Aiden King",
+   "date": "2024-09-04",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, sp90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 581.33,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "sp90"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Aiden King",
+   "date": "2024-07-31",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP is not a real CPT code. Validation rejects the whole claim.",
+   "value": 555.36,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP"
+   ]
+  },
+  {
+   "patient": "Mateo Lee",
+   "provider": "Aiden King",
+   "date": "2024-08-02",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP is not a real CPT code. Validation rejects the whole claim.",
+   "value": 555.36,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP"
+   ]
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-09-12",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker 1 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 537.59,
+   "severity": "High",
+   "codes": [
+    "1"
+   ]
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-09-16",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 537.59,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Perez",
+   "provider": "Noah Lee",
+   "date": "2024-09-06",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Isabella Thomas",
+   "provider": "Elijah Johnson",
+   "date": "2024-09-18",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Olivia Perez",
+   "provider": "Aiden King",
+   "date": "2024-08-12",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, sp90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "sp90"
+   ]
+  },
+  {
+   "patient": "Olivia Lee",
+   "provider": "Aiden King",
+   "date": "2024-09-16",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, sp90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "sp90"
+   ]
+  },
+  {
+   "patient": "Isabella Thomas",
+   "provider": "Liam Young",
+   "date": "2024-08-15",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Isabella Thomas",
+   "provider": "Elijah Johnson",
+   "date": "2024-07-18",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Perez",
+   "provider": "Noah Lee",
+   "date": "2024-09-13",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Isabella Thomas",
+   "provider": "Elijah Johnson",
+   "date": "2024-09-05",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Olivia Perez",
+   "provider": "Aiden King",
+   "date": "2024-08-20",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Olivia Perez",
+   "provider": "Aiden King",
+   "date": "2024-08-06",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, sp90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "sp90"
+   ]
+  },
+  {
+   "patient": "Isabella Thomas",
+   "provider": "Elijah Johnson",
+   "date": "2024-07-03",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Olivia Perez",
+   "provider": "Aiden King",
+   "date": "2024-09-10",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Noah Smith",
+   "provider": "Aiden King",
+   "date": "2024-07-08",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Perez",
+   "provider": "Liam Young",
+   "date": "2024-08-12",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Olivia Perez",
+   "provider": "Aiden King",
+   "date": "2024-08-27",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, sp90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "sp90"
+   ]
+  },
+  {
+   "patient": "Olivia Perez",
+   "provider": "Aiden King",
+   "date": "2024-09-17",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Perez",
+   "provider": "Noah Lee",
+   "date": "2024-08-16",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Perez",
+   "provider": "Noah Lee",
+   "date": "2024-08-30",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Perez",
+   "provider": "Noah Lee",
+   "date": "2024-08-23",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Carter Jones",
+   "provider": "Aiden King",
+   "date": "2024-08-02",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Olivia Lee",
+   "provider": "Aiden King",
+   "date": "2024-08-23",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, sp90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "sp90"
+   ]
+  },
+  {
+   "patient": "Olivia Perez",
+   "provider": "Noah Lee",
+   "date": "2024-09-25",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, sp90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "sp90"
+   ]
+  },
+  {
+   "patient": "Olivia Lee",
+   "provider": "Aiden King",
+   "date": "2024-07-29",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 488.59,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Carter Taylor",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-16",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 459.33,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Olivia Miller",
+   "provider": "Sebastian Miller",
+   "date": "2024-07-08",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP110 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 409.17,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP110"
+   ]
+  },
+  {
+   "patient": "Zoey Lopez",
+   "provider": "Charlotte Williams",
+   "date": "2024-07-18",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 409.17,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Zoey Perez",
+   "provider": "Charlotte Williams",
+   "date": "2024-08-14",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 409.17,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Noah Lee",
+   "date": "2024-07-31",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 389.65,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Aiden Allen",
+   "provider": "Aiden King",
+   "date": "2024-09-10",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 389.58,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Olivia Miller",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-08",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP90"
+   ]
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Noah Lee",
+   "date": "2024-08-06",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Noah Moore",
+   "provider": "Aiden King",
+   "date": "2024-09-11",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, sp90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "sp90"
+   ]
+  },
+  {
+   "patient": "Olivia Moore",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-20",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP$90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "SP$90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Olivia Miller",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-26",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "SP90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Noah Moore",
+   "provider": "Aiden King",
+   "date": "2024-08-26",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, sp90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "sp90"
+   ]
+  },
+  {
+   "patient": "Olivia Miller",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-29",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP90"
+   ]
+  },
+  {
+   "patient": "Olivia Miller",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-01",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP90"
+   ]
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-09-24",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-09-26",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Olivia Moore",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-24",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP$90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "SP$90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Olivia Moore",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-26",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP$90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP$90"
+   ]
+  },
+  {
+   "patient": "Noah Moore",
+   "provider": "Aiden King",
+   "date": "2024-09-04",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Olivia Moore",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-23",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP$90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP$90"
+   ]
+  },
+  {
+   "patient": "Olivia Miller",
+   "provider": "Sebastian Miller",
+   "date": "2024-07-23",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "SP90"
+   ]
+  },
+  {
+   "patient": "Olivia Miller",
+   "provider": "Sebastian Miller",
+   "date": "2024-08-15",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "SP90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Noah Moore",
+   "provider": "Aiden King",
+   "date": "2024-09-18",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Olivia Moore",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-16",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP$90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "SP$90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ava Hernandez",
+   "provider": "Noah Lee",
+   "date": "2024-09-18",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-07-29",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 388.15,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Liam Wilson",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-09",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP$90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 358.89,
+   "severity": "High",
+   "codes": [
+    "SP$90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Mason Clark",
+   "provider": "Aiden King",
+   "date": "2024-08-07",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker TOS, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 358.89,
+   "severity": "High",
+   "codes": [
+    "TOS",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Mason Turner",
+   "provider": "Sebastian Martinez",
+   "date": "2024-09-24",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 355.07,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Mia Brown",
+   "provider": "Julian Lee",
+   "date": "2024-09-11",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 355.07,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Scarlett Miller",
+   "provider": "Julian Lee",
+   "date": "2024-08-27",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 355.07,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sophia Young",
+   "provider": "Sebastian Martinez",
+   "date": "2024-09-17",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 325.33,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sophia Young",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-27",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 325.33,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sophia Young",
+   "provider": "Sebastian Martinez",
+   "date": "2024-09-03",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 325.33,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Zoey Martin",
+   "provider": "Aiden King",
+   "date": "2024-07-01",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, sp90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 322.88,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "sp90"
+   ]
+  },
+  {
+   "patient": "Zoey Martin",
+   "provider": "Aiden King",
+   "date": "2024-07-15",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker sp90, NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 322.88,
+   "severity": "High",
+   "codes": [
+    "sp90",
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Zoey Martin",
+   "provider": "Aiden King",
+   "date": "2024-09-30",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, sp90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 322.88,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "sp90"
+   ]
+  },
+  {
+   "patient": "Zoey Martin",
+   "provider": "Aiden King",
+   "date": "2024-07-29",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, sp90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 322.88,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "sp90"
+   ]
+  },
+  {
+   "patient": "Zoey Martin",
+   "provider": "Aiden King",
+   "date": "2024-08-15",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, sp90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 322.88,
+   "severity": "High",
+   "codes": [
+    "NORCM",
+    "sp90"
+   ]
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Aiden King",
+   "date": "2024-08-02",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 289.14,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Aiden King",
+   "date": "2024-08-28",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 289.14,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Aiden King",
+   "date": "2024-08-09",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 289.14,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Aiden Allen",
+   "provider": "Aiden King",
+   "date": "2024-08-28",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 289.14,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Aiden King",
+   "date": "2024-08-22",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 289.14,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Aiden Allen",
+   "provider": "Aiden King",
+   "date": "2024-09-04",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 289.14,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Aiden King",
+   "date": "2024-07-18",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 289.14,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Aiden Allen",
+   "provider": "Aiden King",
+   "date": "2024-09-25",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 289.14,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Noah Gonzalez",
+   "provider": "Elijah Johnson",
+   "date": "2024-08-01",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 266.15,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Noah Gonzalez",
+   "provider": "Elijah Johnson",
+   "date": "2024-07-25",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 266.15,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Noah Gonzalez",
+   "provider": "Elijah Johnson",
+   "date": "2024-07-18",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 266.15,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Isabella Thomas",
+   "provider": "Elijah Johnson",
+   "date": "2024-08-01",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 266.15,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Mia Brown",
+   "provider": "Julian Lee",
+   "date": "2024-09-25",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 266.15,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Noah Gonzalez",
+   "provider": "Elijah Johnson",
+   "date": "2024-07-16",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 266.15,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Carter Taylor",
+   "provider": "Julian Lee",
+   "date": "2024-09-13",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 266.15,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Julian King",
+   "provider": "Noah Lee",
+   "date": "2024-08-28",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 222.44,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-07-18",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 222.44,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Noah Young",
+   "provider": "Noah Lee",
+   "date": "2024-09-27",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 222.44,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-07-22",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 222.44,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "David Jones",
+   "provider": "Aiden King",
+   "date": "2024-09-27",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker SP90 is not a real CPT code. Validation rejects the whole claim.",
+   "value": 222.44,
+   "severity": "High",
+   "codes": [
+    "SP90"
+   ]
+  },
+  {
+   "patient": "Sebastian Moore",
+   "provider": "Aiden King",
+   "date": "2024-07-10",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 222.44,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-07-02",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 222.44,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Moore",
+   "provider": "Aiden King",
+   "date": "2024-07-30",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 222.44,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-08-05",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 222.44,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Noah Young",
+   "provider": "Noah Lee",
+   "date": "2024-09-06",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 222.44,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-07-05",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 222.44,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Julian King",
+   "provider": "Noah Lee",
+   "date": "2024-09-11",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 222.44,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Jones",
+   "provider": "Julian Lee",
+   "date": "2024-09-10",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 189.36,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Mia Brown",
+   "provider": "Charlotte Williams",
+   "date": "2024-09-19",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 165.71,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Zoey Lopez",
+   "provider": "Julian Lee",
+   "date": "2024-09-06",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 165.71,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Zoey Lopez",
+   "provider": "Charlotte Williams",
+   "date": "2024-08-23",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 165.71,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Zoey Lopez",
+   "provider": "Charlotte Williams",
+   "date": "2024-08-14",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 165.71,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ethan Hernandez",
+   "provider": "Julian Lee",
+   "date": "2024-08-21",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 165.71,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Zoey Lopez",
+   "provider": "Charlotte Williams",
+   "date": "2024-07-31",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 165.71,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Carter Jones",
+   "provider": "Julian Lee",
+   "date": "2024-07-26",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 165.71,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Carter Turner",
+   "provider": "Julian Lee",
+   "date": "2024-09-20",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 165.71,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Zoey Perez",
+   "provider": "Charlotte Williams",
+   "date": "2024-08-21",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 165.71,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Carter Turner",
+   "provider": "Julian Lee",
+   "date": "2024-09-24",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 165.71,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Noah Lee",
+   "date": "2024-08-27",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 100.44,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Aiden Allen",
+   "provider": "Noah Lee",
+   "date": "2024-09-25",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 100.44,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Aiden King",
+   "date": "2024-08-15",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 100.44,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Aiden Allen",
+   "provider": "Noah Lee",
+   "date": "2024-08-30",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 100.44,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Aiden Allen",
+   "provider": "Noah Lee",
+   "date": "2024-09-06",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 100.44,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-12",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 0,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Noah Lee",
+   "date": "2024-08-15",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 0,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Liam King",
+   "provider": "Noah Lee",
+   "date": "2024-08-20",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 0,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-08-19",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 0,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-09-04",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 0,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ethan Lopez",
+   "provider": "Aiden King",
+   "date": "2024-08-27",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 0,
+   "severity": "High",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Emma Miller",
+   "provider": "Sebastian Miller",
+   "date": "2024-09-10",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM, SP is not a real CPT code. Validation rejects the whole claim.",
+   "value": 0,
+   "severity": "Low",
+   "codes": [
+    "NORCM",
+    "SP"
+   ]
+  },
+  {
+   "patient": "Ethan Smith",
+   "provider": "Sebastian Martinez",
+   "date": "2024-08-14",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 0,
+   "severity": "Low",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Anderson",
+   "provider": "Sebastian Martinez",
+   "date": "2024-09-06",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 0,
+   "severity": "Low",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Anderson",
+   "provider": "Sebastian Martinez",
+   "date": "2024-09-16",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 0,
+   "severity": "Low",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Sebastian Anderson",
+   "provider": "Sebastian Martinez",
+   "date": "2024-09-20",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 0,
+   "severity": "Low",
+   "codes": [
+    "NORCM"
+   ]
+  },
+  {
+   "patient": "Ethan Smith",
+   "provider": "Sebastian Martinez",
+   "date": "2024-07-03",
+   "reason": "Invalid code in CPT field",
+   "note": "Internal marker NORCM is not a real CPT code. Validation rejects the whole claim.",
+   "value": 0,
+   "severity": "Low",
+   "codes": [
+    "NORCM"
+   ]
+  }
+ ],
+ "providers": [
+  {
+   "provider": "Aiden King",
+   "clean_enc": 1840,
+   "missing_enc": 95,
+   "mismatch_enc": 10,
+   "missing_val": 45377.27,
+   "dirty": 136,
+   "total_enc": 1935,
+   "leak_pct": 4.91
+  },
+  {
+   "provider": "Noah Lee",
+   "clean_enc": 1464,
+   "missing_enc": 52,
+   "mismatch_enc": 14,
+   "missing_val": 22661.01,
+   "dirty": 36,
+   "total_enc": 1516,
+   "leak_pct": 3.43
+  },
+  {
+   "provider": "Liam Young",
+   "clean_enc": 588,
+   "missing_enc": 36,
+   "mismatch_enc": 4,
+   "missing_val": 20135.17,
+   "dirty": 2,
+   "total_enc": 624,
+   "leak_pct": 5.77
+  },
+  {
+   "provider": "Sebastian Miller",
+   "clean_enc": 603,
+   "missing_enc": 37,
+   "mismatch_enc": 4,
+   "missing_val": 19493.24,
+   "dirty": 64,
+   "total_enc": 640,
+   "leak_pct": 5.78
+  },
+  {
+   "provider": "Charlotte Williams",
+   "clean_enc": 576,
+   "missing_enc": 20,
+   "mismatch_enc": 1,
+   "missing_val": 10509.9,
+   "dirty": 31,
+   "total_enc": 596,
+   "leak_pct": 3.36
+  },
+  {
+   "provider": "Sebastian Martinez",
+   "clean_enc": 554,
+   "missing_enc": 19,
+   "mismatch_enc": 1,
+   "missing_val": 6858.19,
+   "dirty": 22,
+   "total_enc": 573,
+   "leak_pct": 3.32
+  },
+  {
+   "provider": "Julian Lee",
+   "clean_enc": 472,
+   "missing_enc": 13,
+   "mismatch_enc": 0,
+   "missing_val": 4112.48,
+   "dirty": 14,
+   "total_enc": 485,
+   "leak_pct": 2.68
+  },
+  {
+   "provider": "Elijah Johnson",
+   "clean_enc": 233,
+   "missing_enc": 10,
+   "mismatch_enc": 0,
+   "missing_val": 3963.06,
+   "dirty": 10,
+   "total_enc": 243,
+   "leak_pct": 4.12
+  }
+ ],
+ "dirty": [
+  {
+   "code": "NORCM",
+   "count": 206,
+   "label": "RCM internal status flag (do not bill)"
+  },
+  {
+   "code": "sp90",
+   "count": 36,
+   "label": "Short procedure fragment (case variance)"
+  },
+  {
+   "code": "TOS115",
+   "count": 27,
+   "label": "Place-of-service modifier fragment"
+  },
+  {
+   "code": "SP",
+   "count": 27,
+   "label": "Short procedure fragment"
+  },
+  {
+   "code": "SP90",
+   "count": 7,
+   "label": "Short procedure fragment"
+  },
+  {
+   "code": "SP$90",
+   "count": 7,
+   "label": "Short procedure fragment"
+  },
+  {
+   "code": "SP110",
+   "count": 1,
+   "label": "Short procedure fragment"
+  },
+  {
+   "code": "1",
+   "count": 1,
+   "label": "Unrecognised code - needs mapping"
+  },
+  {
+   "code": "SP$110",
+   "count": 1,
+   "label": "Short procedure fragment"
+  },
+  {
+   "code": "TOS",
+   "count": 1,
+   "label": "Place-of-service modifier fragment"
+  },
+  {
+   "code": "sp120",
+   "count": 1,
+   "label": "Short procedure fragment (case variance)"
+  }
+ ],
+ "monthly": [
+  {
+   "month": "2024-07",
+   "clean": 2077,
+   "missing": 65,
+   "missing_val": 29841.77,
+   "mismatch": 16,
+   "ghost": 14,
+   "imported": 2063
+  },
+  {
+   "month": "2024-08",
+   "clean": 2142,
+   "missing": 106,
+   "missing_val": 50132.19,
+   "mismatch": 9,
+   "ghost": 12,
+   "imported": 2130
+  },
+  {
+   "month": "2024-09",
+   "clean": 2111,
+   "missing": 111,
+   "missing_val": 53136.36,
+   "mismatch": 9,
+   "ghost": 18,
+   "imported": 2093
+  }
+ ],
+ "codes": [
+  {
+   "code": "97140",
+   "lines": 6370,
+   "rate": 0.0,
+   "family": "Other",
+   "valid": true,
+   "missing_lines": 13,
+   "extra_lines": 10
+  },
+  {
+   "code": "97110",
+   "lines": 5640,
+   "rate": 165.71,
+   "family": "Established Patient E/M - low/moderate",
+   "valid": true,
+   "missing_lines": 12,
+   "extra_lines": 11
+  },
+  {
+   "code": "97112",
+   "lines": 4911,
+   "rate": 222.44,
+   "family": "Established Patient E/M - moderate",
+   "valid": true,
+   "missing_lines": 11,
+   "extra_lines": 8
+  },
+  {
+   "code": "97010",
+   "lines": 4844,
+   "rate": 100.44,
+   "family": "New Patient E/M - low",
+   "valid": true,
+   "missing_lines": 11,
+   "extra_lines": 6
+  },
+  {
+   "code": "97014",
+   "lines": 1846,
+   "rate": 193.18,
+   "family": "New Patient E/M - high",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 10
+  },
+  {
+   "code": "G0283",
+   "lines": 759,
+   "rate": 66.77,
+   "family": "Physician-QHP telephone E/M",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 2
+  },
+  {
+   "code": "97161",
+   "lines": 378,
+   "rate": 189.36,
+   "family": "Chronic Care Mgmt - initial",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "97162",
+   "lines": 250,
+   "rate": 243.46,
+   "family": "Chronic Care Mgmt - subsequent",
+   "valid": true,
+   "missing_lines": 1,
+   "extra_lines": 3
+  },
+  {
+   "code": "97035",
+   "lines": 239,
+   "rate": 214.71,
+   "family": "Established Patient E/M - moderate",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 1
+  },
+  {
+   "code": "NORCM",
+   "lines": 206,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 206,
+   "extra_lines": 0
+  },
+  {
+   "code": "97530",
+   "lines": 126,
+   "rate": 120.43,
+   "family": "Therapeutic activities",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "97113",
+   "lines": 90,
+   "rate": 289.14,
+   "family": "Established Patient E/M - moderate/high",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "97163",
+   "lines": 56,
+   "rate": 363.72,
+   "family": "Chronic Care Mgmt - high complexity",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "97032",
+   "lines": 36,
+   "rate": 159.62,
+   "family": "Established Patient E/M - low",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "sp90",
+   "lines": 36,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 36,
+   "extra_lines": 0
+  },
+  {
+   "code": "97116",
+   "lines": 29,
+   "rate": 0.0,
+   "family": "Other",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "TOS115",
+   "lines": 27,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 27,
+   "extra_lines": 0
+  },
+  {
+   "code": "SP",
+   "lines": 27,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 27,
+   "extra_lines": 0
+  },
+  {
+   "code": "97124",
+   "lines": 23,
+   "rate": 42.87,
+   "family": "TTA",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "97012",
+   "lines": 20,
+   "rate": 180.68,
+   "family": "New Patient E/M - moderate",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "97164",
+   "lines": 11,
+   "rate": 203.36,
+   "family": "Chronic Care Mgmt - complex",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "SP90",
+   "lines": 7,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 7,
+   "extra_lines": 0
+  },
+  {
+   "code": "SP$90",
+   "lines": 7,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 7,
+   "extra_lines": 0
+  },
+  {
+   "code": "98960",
+   "lines": 6,
+   "rate": 115.53,
+   "family": "Treatment w/ manipulation",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "97606",
+   "lines": 3,
+   "rate": 113.7,
+   "family": "Evaluation of orthotics",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "98970",
+   "lines": 2,
+   "rate": 111.3,
+   "family": "Acupuncture",
+   "valid": true,
+   "missing_lines": 0,
+   "extra_lines": 0
+  },
+  {
+   "code": "SP110",
+   "lines": 1,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 1,
+   "extra_lines": 0
+  },
+  {
+   "code": "1",
+   "lines": 1,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 1,
+   "extra_lines": 0
+  },
+  {
+   "code": "SP$110",
+   "lines": 1,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 1,
+   "extra_lines": 0
+  },
+  {
+   "code": "TOS",
+   "lines": 1,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 1,
+   "extra_lines": 0
+  },
+  {
+   "code": "sp120",
+   "lines": 1,
+   "rate": 0.0,
+   "family": "NON-BILLABLE / UNMAPPED",
+   "valid": false,
+   "missing_lines": 1,
+   "extra_lines": 0
+  }
+ ],
+ "families": {
+  "New Patient E/M": {
+   "lines": 6710,
+   "value": 846755.24
+  },
+  "Established Patient E/M": {
+   "lines": 10670,
+   "value": 2053029.84
+  },
+  "Chronic Care Mgmt": {
+   "lines": 695,
+   "value": 155048.36
+  },
+  "Adjunct & other services": {
+   "lines": 6805,
+   "value": 74479.08
+  },
+  "Telemedicine / modifier": {
+   "lines": 759,
+   "value": 50678.43
+  },
+  "Non-billable / unmapped": {
+   "lines": 315,
+   "value": 0
+  }
+ }
+}
